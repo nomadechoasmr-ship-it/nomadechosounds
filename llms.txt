@@ -7,6 +7,9 @@
 - [Is birdsong good for sleep?](https://nomadechosounds.com/birdsong-for-sleep/): A dawn birdsong recording measured against a mountain brook: 42 loud events per minute vs none, 3.73 dB vs 0.31 dB loudness variation.
 - [Tian Shan field recordings](https://nomadechosounds.com/tian-shan-field-recordings/): Where and how the recordings are made: Ile Alatau, about 1,500 m, spring 2026, equipment and spot selection.
 
+## About
+- [About Nomad Echo Sounds](https://nomadechosounds.com/about/): Who records these sounds, how they are measured, and how the site is written.
+
 ## Listen
 - [YouTube channel: Nomad Echo ASMR](https://www.youtube.com/@NomadEchoASMR): Long black-screen tinnitus relief and sleep tracks made from these recordings.
 
