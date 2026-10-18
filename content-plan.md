@@ -10,6 +10,8 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 - Soft Marsh Water (video JYSK0zeIStk): a small stream in marshland near the Kapchagay reservoir.
 - Rain with video (under a roof): Tian Shan foothills. Black-screen rain: recorded from a window at home in the city.
 
+- Noise tracks (white, pink, brown, grey, blue): never generated. Made from the owner's own recordings (streams; water from an abandoned pipe left from dam construction on a Tian Shan riverbank) by equalising, filtering and taming peaks in an editor. Owner's firm principle: no generated noise.
+
 ## Queue
 
 - [ ] 1. Mountain Brook — recording page with full measurements. Slug: /recordings/mountain-brook/
