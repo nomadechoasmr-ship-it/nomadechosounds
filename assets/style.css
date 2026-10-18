@@ -1,0 +1,91 @@
+/* Nomad Echo Sounds — night-sky header like the tinnitus thumbnails, calm reading column, measurement tables as the signature detail */
+:root{
+  --bg:#f3f5f8; --surface:#ffffff; --fg:#17202e; --muted:#5a6578; --line:#d7dde6;
+  --night:#121b2c; --night-fg:#e8ecf3; --night-muted:#9aa7bd;
+  --accent:#2f6f8f; --accent-soft:#e1edf3; --warn:#9a5b1a; --warn-soft:#f6ebdd; --ok:#2e6b4f; --ok-soft:#e2efe8;
+  --display:"Gloock", Georgia, "Times New Roman", serif;
+  --body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0e1522; --surface:#151f31; --fg:#e6ebf2; --muted:#9aa6ba; --line:#26334a;
+  --night:#0a101b; --night-fg:#e8ecf3; --night-muted:#93a1b8;
+  --accent:#8cc3dc; --accent-soft:#1a3142; --warn:#e2b07a; --warn-soft:#33281b; --ok:#8fd0ae; --ok-soft:#183026; color-scheme:dark}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.65}
+img{max-width:100%;height:auto}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.prose{max-width:68ch}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.6rem,3.5vw,2.2rem)}
+h3{font-size:1.3rem}
+p{margin:0}
+.label{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+.night{background:var(--night);color:var(--night-fg);position:relative;overflow:hidden}
+.night .wrap{padding-block:20px 56px;display:grid;gap:40px}
+.night.compact .wrap{padding-block:20px 40px;gap:28px}
+nav{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 24px;position:relative;z-index:1}
+.brand{font-family:var(--display);font-size:1.25rem;color:var(--night-fg);text-decoration:none}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 20px;font-size:.92rem}
+nav a{color:var(--night-muted);text-decoration:none}
+nav a:hover{color:var(--night-fg)}
+.moon{position:absolute;top:28px;right:max(24px,6vw);width:72px;height:72px;border-radius:50%;
+  background:radial-gradient(circle at 38% 38%,#f4f1e6 0 55%,#d9d4c3 100%);box-shadow:0 0 60px 10px rgba(240,236,220,.12);opacity:.9}
+.hero{display:grid;gap:18px;max-width:42rem;position:relative;z-index:1}
+.hero .label{color:var(--night-muted)}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem)}
+.night.compact .hero h1{font-size:clamp(1.9rem,4.6vw,2.9rem)}
+.hero p{color:var(--night-muted);font-size:1.08rem}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.btn{display:inline-block;padding:10px 18px;border-radius:4px;font-weight:500;font-size:.95rem;text-decoration:none}
+.btn.primary{background:var(--night-fg);color:var(--night)}
+.btn.ghost{border:1px solid #3a4a66;color:var(--night-fg)}
+
+main{display:grid;gap:72px;padding-block:56px 72px}
+section{display:grid;gap:20px}
+
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.fact{background:var(--surface);padding:18px 20px;display:grid;gap:4px}
+.fact b{font-family:var(--mono);font-weight:500;font-size:1.35rem;font-variant-numeric:tabular-nums}
+.fact span{color:var(--muted);font-size:.9rem}
+
+article{display:grid;gap:22px}
+.meta{color:var(--muted);font-size:.9rem}
+.tablebox{overflow-x:auto;border:1px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.92rem}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-weight:500;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.pill{display:inline-block;font-family:var(--mono);font-size:.72rem;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.pill.no{background:var(--warn-soft);color:var(--warn)}
+.caption{color:var(--muted);font-size:.85rem}
+ul.chain{margin:0;padding-left:1.2em;display:grid;gap:6px}
+.note{border-left:3px solid var(--warn);background:var(--warn-soft);padding:14px 18px;font-size:.95rem}
+.refs{margin:0;padding-left:1.2em;display:grid;gap:6px;font-size:.9rem;color:var(--muted)}
+
+.feature{display:grid;gap:12px;background:var(--surface);border:1px solid var(--line);padding:28px}
+.feature p{color:var(--muted);max-width:60ch}
+
+.videos{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.video{display:grid;grid-template-rows:auto 1fr;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:var(--fg);min-width:0}
+.thumb{aspect-ratio:16/9;max-width:100%;background:var(--night);position:relative;display:grid;place-items:center;color:var(--night-fg);font-family:var(--display);font-size:1.05rem;letter-spacing:.04em;overflow:hidden}
+.thumb::after{content:"";position:absolute;top:12%;right:9%;width:16%;aspect-ratio:1;border-radius:50%;background:#efe9d8;opacity:.85}
+.thumb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video .info{padding:12px 14px;display:grid;gap:4px;align-content:start}
+.video .info span{color:var(--muted);font-size:.85rem}
+a.video:hover .thumb{outline:2px solid var(--accent);outline-offset:-2px}
+
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px}
+.panel{background:var(--surface);border:1px solid var(--line);padding:24px;display:grid;gap:12px;align-content:start}
+.soon{font-family:var(--mono);font-size:.75rem;color:var(--accent)}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+footer .wrap{padding-block:28px;display:grid;gap:10px}
+footer a{color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.btn,.thumb{transition:outline-color .15s}}
