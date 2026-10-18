@@ -4,10 +4,15 @@ Each scheduled run publishes the FIRST unchecked topic, then ticks it here with 
 Use only the facts below (they come from the owner's own measurements). Never invent numbers.
 If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing and ask the owner for new material.
 
+## Locations confirmed by the owner
+- Mountain streams and rivers: Tian Shan mountains near Almaty.
+- Lake waves and shore sounds: Kapchagay reservoir shore.
+- Rain with video (under a roof): Tian Shan foothills. Black-screen rain: recorded from a window at home in the city.
+
 ## Queue
 
 - [ ] 1. Mountain Brook — recording page with full measurements. Slug: /recordings/mountain-brook/
-  - YouTube video: i1Un95nTRa0 ("Tinnitus Relief Sound Masking · Mountain Brook"). Location: not confirmed yet — do not state a location; in the report, ask the owner where it was recorded.
+  - YouTube video: i1Un95nTRa0 ("Tinnitus Relief Sound Masking · Mountain Brook"). Location: Tian Shan mountains near Almaty (owner confirmed: all streams and rivers are recorded in the Tian Shan).
   - Source: mountain brook, 2026; 18 min source take (85 s excerpt analysed).
   - Loudness variation (std of level, 400 ms windows) 0.31 dB; P95–P5 spread 1.04 dB; zero frames >6 dB above median (no transients).
   - Drift across the excerpt 0.2 dB RMS; spectral centroid 1115–1136 Hz; no tonal peaks; sub-40 Hz energy 0.059%; no clipping; loop seam 0.00 dB.
@@ -15,7 +20,7 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
   - Chain: trim spoken slate (keep 0:20–19:55), channel balance, high shelf −5 dB at 6 kHz, no compressor, peak-normalise to −3 dBFS, loop.
   - Lesson: the spot looked like a splashy cascade in photos and was almost rejected; rocks atomise the flow into even foam. Never judge by a photo; measure.
 - [ ] 2. Mountain River — recording page with full measurements. Slug: /recordings/mountain-river/
-  - YouTube video: GM9wlcADK_s (now titled "Sleep Sounds for Insomnia · Mountain River"). Location: not confirmed yet — do not state a location; in the report, ask the owner where it was recorded.
+  - YouTube video: GM9wlcADK_s (now titled "Sleep Sounds for Insomnia · Mountain River"). Location: Tian Shan mountains near Almaty (owner confirmed: all streams and rivers are recorded in the Tian Shan).
   - Source: noisy-but-constant mountain river, 2026; 26.3 min take; spoken slate at start.
   - Core section (4–24 min): loudness variation 0.62 dB; P95–P5 2.04 dB; transients >6 dB 0.031%, >10 dB 0.000%; no tonal peaks.
   - Drift over 20 min 0.6 dB RMS; centroid 1142–1182 Hz; sub-40 Hz 0.04%; peak −6.2 dBFS, RMS −30.3 dBFS (recorded at a good level); L/R balance −0.46 dB.

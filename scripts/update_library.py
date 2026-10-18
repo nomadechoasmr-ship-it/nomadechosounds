@@ -46,6 +46,16 @@ def section_of(title):
             return key, name
     return OTHER
 
+INTROS = {
+    "tinnitus": "Steady water recordings chosen and measured for even loudness, with no sudden peaks.",
+    "rain": "Rain with video was recorded under a roof in the Tian Shan foothills; the black-screen rain tracks were recorded from a window at home in the city.",
+    "birds": "Birdsong recorded on location. Best for daytime or a short wind-down session.",
+    "noise": "White, pink, brown and other noise colours shaped from our own water recordings, not generated from scratch.",
+    "water": "Mountain streams and rivers are recorded in the Tian Shan above Almaty. Lake waves and shore sounds are recorded on the Kapchagay reservoir.",
+    "scenes": "Visual recordings from the Tian Shan mountains.",
+    "more": "Other recordings from the channel.",
+}
+
 def card(v):
     vid = html.escape(v["id"]); title = html.escape(v["title"])
     return (f'<div class="video"><button class="thumb lite" type="button" data-id="{vid}" aria-label="Play: {title}">'
@@ -63,7 +73,7 @@ def render(videos):
     for k, n in order:
         if (k, n) in groups:
             items = "\n      ".join(card(v) for v in groups[(k, n)])
-            parts.append(f'    <section id="{k}">\n    <h2>{html.escape(n)}</h2>\n    <div class="videos">\n      {items}\n    </div>\n    </section>')
+            parts.append(f'    <section id="{k}">\n    <h2>{html.escape(n)}</h2>\n    <p>{html.escape(INTROS.get(k, ""))}</p>\n    <div class="videos">\n      {items}\n    </div>\n    </section>')
     nav = " · ".join(f'<a href="#{k}">{html.escape(n)}</a>' for k, n in order if (k, n) in groups)
     tpl = (ROOT / "scripts" / "library_template.html").read_text(encoding="utf-8")
     return (tpl.replace("{{COUNT}}", str(len(videos)))
