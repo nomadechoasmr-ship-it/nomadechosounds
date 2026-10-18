@@ -35,6 +35,8 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
   - A compressor lifts the background noise and recorder hiss of natural recordings and flattens natural dynamics; we use only trim, balance, a gentle high shelf and normalisation. Use the Mountain River level figures as the example.
 - [ ] 5. Stereo balance and why 3.5 dB matters in headphones over a night. Slug: /stereo-balance-sleep-sounds/
   - Use the Mountain Brook imbalance (L +3.5 dB, correlation 0.58) and the fix. Keep claims about perception general and sourced.
-- [ ] 6. Water vs brown noise: a measured comparison. BLOCKED — needs the owner's brown-noise file and a raw brook file to measure.
+- [ ] 6. How we make noise colours from real water (no generated noise). Slug: /how-we-make-noise-from-real-water/
+  - Facts: noise tracks are made only from the owner's recordings of streams and of water running through an abandoned steel pipe left from dam construction on a Tian Shan riverbank; shaped by equalising, filtering and taming peaks in an editor. Embed the pipe short V0CaA8UVzHE (vertical, use the .short wrapper). Do not invent EQ settings or frequencies; describe the method in general terms only.
+- [ ] 7. Water vs brown noise: a measured comparison. BLOCKED — needs the owner's brown-noise file and a raw brook file to measure.
 
 ## Done
