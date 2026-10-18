@@ -13,6 +13,7 @@ SECTIONS = [
     ("tinnitus", "Tinnitus relief", r"tinnitus"),
     ("rain", "Rain", r"\brain"),
     ("birds", "Birds", r"\bbird"),
+    ("noise", "White, pink and brown noise from real water", r"\bnoise"),
     ("water", "Streams, rivers and water", r"stream|river|brook|creek|water|wave|spring|waterfall|lake|marsh|shore|drop"),
     ("scenes", "Mountain and forest scenes", r"4k|forest|mountain|meadow|walk|pov|valley|snow"),
 ]
