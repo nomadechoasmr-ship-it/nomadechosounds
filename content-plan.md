@@ -10,7 +10,7 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 - Soft Marsh Water (video JYSK0zeIStk): a small stream in marshland near the Kapchagay reservoir.
 - Rain with video (under a roof): Tian Shan foothills. Black-screen rain: recorded from a window at home in the city.
 
-- Noise tracks (white, pink, brown, grey, blue): never generated. Made from the owner's own recordings (streams; water from an abandoned pipe left from dam construction on a Tian Shan riverbank) by equalising, filtering and taming peaks in an editor. Owner's firm principle: no generated noise.
+- Noise tracks (white, pink, brown, grey, blue): never generated. Made from the owner's own recordings (streams; water from an old steel pipe left from Soviet-era construction (owner mentions a dam) on a Tian Shan riverbank, now sunk into the slope and overgrown with moss, feeding its own tiny stream) by equalising, filtering and taming peaks in an editor. Owner's firm principle: no generated noise.
 
 ## Queue
 
