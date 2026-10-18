@@ -95,3 +95,9 @@ footer a{color:var(--muted)}
 .photo figcaption{color:var(--muted);font-size:.85rem}
 .short{width:100%;max-width:320px;aspect-ratio:9/16;background:var(--night);border:1px solid var(--line)}
 .short iframe{width:100%;height:100%;border:0;display:block}
+.lite{border:0;padding:0;cursor:pointer;width:100%;display:block}
+.lite img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.92}
+.lite::after{display:none}
+.lite .play{position:relative;z-index:1;width:56px;height:40px;border-radius:10px;background:rgba(10,16,27,.8);color:#fff;display:grid;place-items:center;font-size:1rem}
+.lite:hover img,.lite:focus-visible img{opacity:1}
+.lite:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}

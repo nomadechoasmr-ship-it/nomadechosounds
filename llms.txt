@@ -11,6 +11,7 @@
 - [About Nomad Echo Sounds](https://nomadechosounds.com/about/): Who records these sounds, how they are measured, and how the site is written.
 
 ## Listen
+- [Nature sound library](https://nomadechosounds.com/library/): Every long-form recording, grouped by sound, playable on the page.
 - [YouTube channel: Nomad Echo ASMR](https://www.youtube.com/@NomadEchoASMR): Long black-screen tinnitus relief and sleep tracks made from these recordings.
 
 ## Notes
