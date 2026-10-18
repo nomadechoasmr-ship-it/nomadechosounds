@@ -1,0 +1,14 @@
+# Nomad Echo Sounds
+
+> Real field recordings of mountain water from the Ile Alatau (Northern Tian Shan, near Almaty, Kazakhstan). Every recording is measured for loudness steadiness, sudden peaks and tone drift before it becomes an 8-hour track for sleep and tinnitus masking. No AI-generated audio. Recorded on a Zoom H5, WAV 48 kHz / 24-bit.
+
+## Guides
+- [Which natural sounds mask tinnitus best?](https://nomadechosounds.com/tinnitus-masking-sounds/): Measurements of real recordings (loudness variation, P95–P5 spread, transient counts, spectral centroid); which passed and why; preparation chain; research references.
+- [Is birdsong good for sleep?](https://nomadechosounds.com/birdsong-for-sleep/): A dawn birdsong recording measured against a mountain brook: 42 loud events per minute vs none, 3.73 dB vs 0.31 dB loudness variation.
+- [Tian Shan field recordings](https://nomadechosounds.com/tian-shan-field-recordings/): Where and how the recordings are made: Ile Alatau, about 1,500 m, spring 2026, equipment and spot selection.
+
+## Listen
+- [YouTube channel: Nomad Echo ASMR](https://www.youtube.com/@NomadEchoASMR): 8-hour black-screen tinnitus relief and sleep tracks made from these recordings.
+
+## Notes
+- Content is for relaxation and general information, not medical advice.
