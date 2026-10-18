@@ -7,6 +7,7 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 ## Locations confirmed by the owner
 - Mountain streams and rivers: Tian Shan mountains near Almaty.
 - Lake waves and shore sounds: Kapchagay reservoir shore.
+- Soft Marsh Water (video JYSK0zeIStk): a small stream in marshland near the Kapchagay reservoir.
 - Rain with video (under a roof): Tian Shan foothills. Black-screen rain: recorded from a window at home in the city.
 
 ## Queue

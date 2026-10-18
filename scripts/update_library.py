@@ -47,11 +47,11 @@ def section_of(title):
     return OTHER
 
 INTROS = {
-    "tinnitus": "Steady water recordings chosen and measured for even loudness, with no sudden peaks.",
+    "tinnitus": "Steady water recordings chosen and measured for even loudness, with no sudden peaks. Mountain streams come from the Tian Shan; Soft Marsh Water is a small stream in marshland near the Kapchagay reservoir.",
     "rain": "Rain with video was recorded under a roof in the Tian Shan foothills; the black-screen rain tracks were recorded from a window at home in the city.",
     "birds": "Birdsong recorded on location. Best for daytime or a short wind-down session.",
     "noise": "White, pink, brown and other noise colours shaped from our own water recordings, not generated from scratch.",
-    "water": "Mountain streams and rivers are recorded in the Tian Shan above Almaty. Lake waves and shore sounds are recorded on the Kapchagay reservoir.",
+    "water": "Mountain streams and rivers are recorded in the Tian Shan above Almaty. Lake waves, shore sounds and the small marsh stream are recorded around the Kapchagay reservoir.",
     "scenes": "Visual recordings from the Tian Shan mountains.",
     "more": "Other recordings from the channel.",
 }
