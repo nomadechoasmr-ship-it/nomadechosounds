@@ -107,3 +107,7 @@ footer a{color:var(--muted)}
 .support .kofi{justify-self:start;display:inline-block;padding:9px 16px;border-radius:4px;background:var(--accent);color:var(--surface);text-decoration:none;font-weight:500;font-size:.95rem}
 .support .kofi:hover{opacity:.9}
 .support.slim{margin:12px 0 24px;padding:12px 16px}
+.support.has-photo{grid-template-columns:120px 1fr;gap:18px;align-items:start}
+.support .avatar img{display:block;width:100%;height:auto;border-radius:4px}
+.support-body{display:grid;gap:8px}
+@media (max-width:560px){.support.has-photo{grid-template-columns:1fr;gap:12px}.support .avatar{width:110px}}
