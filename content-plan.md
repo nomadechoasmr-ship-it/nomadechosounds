@@ -12,6 +12,9 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 
 - Noise tracks (white, pink, brown, grey, blue): never generated. Made from the owner's own recordings (streams; water from an old steel pipe left from Soviet-era construction (owner mentions a dam) on a Tian Shan riverbank, now sunk into the slope and overgrown with moss, feeding its own tiny stream) by equalising, filtering and taming peaks in an editor. Owner's firm principle: no generated noise.
 
+## Rule for every new article
+- Insert the Ko-fi note block (`<aside class="support">…A note from Andrey…</aside>`, copy it exactly from /tinnitus-masking-sounds/) inside the article, right after the main "Listen" videos and before the medical note. Not only in the footer.
+
 ## Queue
 
 - [ ] 1. Mountain Brook — recording page with full measurements. Slug: /recordings/mountain-brook/
