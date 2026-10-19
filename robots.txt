@@ -1,8 +1,6 @@
 # Search engines and AI assistants are welcome to read this site.
 User-agent: *
 Allow: /
-Disallow: /content-plan.md
-Disallow: /README.md
 
 # AI search and answer engines (listed explicitly)
 User-agent: OAI-SearchBot

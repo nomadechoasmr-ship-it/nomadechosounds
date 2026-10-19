@@ -1,0 +1,53 @@
+name: Update library and deploy site
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh video library from channel feed
+        if: github.event_name != 'push'
+        run: python scripts/update_library.py
+      - name: Commit library changes
+        if: github.event_name != 'push'
+        run: |
+          if git diff --quiet; then echo "No changes"; exit 0; fi
+          git config user.name "nomadechoasmr-ship-it"
+          git config user.email "nomadechoasmr-ship-it@users.noreply.github.com"
+          git add data/videos.json library/index.html
+          git commit -m "Update video library from channel feed"
+          git push
+      - name: Assemble site (public files only)
+        run: |
+          mkdir _site
+          rsync -a --exclude '.git' --exclude '.github' --exclude 'scripts' --exclude 'data' \
+            --exclude 'content-plan.md' --exclude 'README.md' --exclude 'netlify.toml' --exclude '_site' ./ _site/
+          ls _site
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
