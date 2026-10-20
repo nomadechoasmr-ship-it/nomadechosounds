@@ -17,7 +17,7 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 
 ## Queue
 
-- [ ] 1. Mountain Brook — recording page with full measurements. Slug: /recordings/mountain-brook/
+- [x] 1. Mountain Brook — recording page with full measurements. Slug: /recordings/mountain-brook/
   - YouTube video: i1Un95nTRa0 ("Tinnitus Relief Sound Masking · Mountain Brook"). Location: Tian Shan mountains near Almaty (owner confirmed: all streams and rivers are recorded in the Tian Shan).
   - Source: mountain brook, 2026; 18 min source take (85 s excerpt analysed).
   - Loudness variation (std of level, 400 ms windows) 0.31 dB; P95–P5 spread 1.04 dB; zero frames >6 dB above median (no transients).
@@ -43,3 +43,4 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 - [ ] 7. Water vs brown noise: a measured comparison. BLOCKED — needs the owner's brown-noise file and a raw brook file to measure.
 
 ## Done
+- 2026-10-20: Mountain Brook recording notes — https://nomadechosounds.com/recordings/mountain-brook/
