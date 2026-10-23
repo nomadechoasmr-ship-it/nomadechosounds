@@ -7,6 +7,7 @@
 - [Is birdsong good for sleep?](https://nomadechosounds.com/birdsong-for-sleep/): A dawn birdsong recording measured against a mountain brook: 42 loud events per minute vs none, 3.73 dB vs 0.31 dB loudness variation.
 - [Tian Shan field recordings](https://nomadechosounds.com/tian-shan-field-recordings/): Where and how the recordings are made: Ile Alatau, about 1,500 m, spring 2026, equipment and spot selection.
 - [Mountain Brook: recording notes](https://nomadechosounds.com/recordings/mountain-brook/): Full measurements of our steadiest Tian Shan brook recording (0.31 dB loudness variation, no peaks >6 dB), the 3.5 dB channel imbalance fix and the preparation chain.
+- [Mountain River: recording notes](https://nomadechosounds.com/recordings/mountain-river/): Measurements of a loud but constant Tian Shan river over 20 minutes (0.62 dB loudness variation, no peaks >10 dB, 0.6 dB drift), comparison with the brook and the preparation chain.
 
 ## About
 - [About Nomad Echo Sounds](https://nomadechosounds.com/about/): Who records these sounds, how they are measured, and how the site is written.

@@ -25,7 +25,7 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
   - Flaw found: left channel 3.5 dB louder than right (L/R correlation 0.58); fixed with a pan filter before looping.
   - Chain: trim spoken slate (keep 0:20–19:55), channel balance, high shelf −5 dB at 6 kHz, no compressor, peak-normalise to −3 dBFS, loop.
   - Lesson: the spot looked like a splashy cascade in photos and was almost rejected; rocks atomise the flow into even foam. Never judge by a photo; measure.
-- [ ] 2. Mountain River — recording page with full measurements. Slug: /recordings/mountain-river/
+- [x] 2. Mountain River — recording page with full measurements. Slug: /recordings/mountain-river/
   - YouTube video: GM9wlcADK_s (now titled "Sleep Sounds for Insomnia · Mountain River"). Location: Tian Shan mountains near Almaty (owner confirmed: all streams and rivers are recorded in the Tian Shan).
   - Source: noisy-but-constant mountain river, 2026; 26.3 min take; spoken slate at start.
   - Core section (4–24 min): loudness variation 0.62 dB; P95–P5 2.04 dB; transients >6 dB 0.031%, >10 dB 0.000%; no tonal peaks.
@@ -44,3 +44,4 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 
 ## Done
 - 2026-10-20: Mountain Brook recording notes — https://nomadechosounds.com/recordings/mountain-brook/
+- 2026-10-23: Mountain River recording notes — https://nomadechosounds.com/recordings/mountain-river/
