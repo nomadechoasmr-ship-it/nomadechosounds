@@ -1,12 +1,13 @@
 """Fetch the channel RSS feed, merge new long-form videos into data/videos.json,
 and render library/index.html. Shorts are skipped. Safe to run repeatedly."""
-import html, json, re, sys, urllib.request
+import datetime, html, json, re, sys, urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "videos.json"
 OUT = ROOT / "library" / "index.html"
+SITEMAP = ROOT / "sitemap.xml"
 NS = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015", "media": "http://search.yahoo.com/mrss/"}
 
 SECTIONS = [
@@ -80,6 +81,13 @@ def render(videos):
                .replace("{{NAV}}", nav)
                .replace("{{SECTIONS}}", "\n".join(parts)))
 
+def bump_lastmod(url):
+    """Set the sitemap <lastmod> of one URL to today, so Google re-checks the page."""
+    today = datetime.date.today().isoformat()
+    xml = SITEMAP.read_text(encoding="utf-8")
+    pattern = r"(<loc>" + re.escape(url) + r"</loc><lastmod>)[^<]*(</lastmod>)"
+    SITEMAP.write_text(re.sub(pattern, r"\g<1>" + today + r"\g<2>", xml), encoding="utf-8")
+
 def main():
     data = json.loads(DATA.read_text(encoding="utf-8"))
     known = {v["id"]: v for v in data["videos"]}
@@ -94,7 +102,10 @@ def main():
             print("feed fetch failed:", exc)
     data["videos"] = list(known.values())
     DATA.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    OUT.write_text(render(data["videos"]), encoding="utf-8")
+    page = render(data["videos"])
+    if not OUT.exists() or OUT.read_text(encoding="utf-8") != page:
+        OUT.write_text(page, encoding="utf-8")
+        bump_lastmod("https://nomadechosounds.com/library/")
     print("videos:", len(data["videos"]))
 
 if __name__ == "__main__":

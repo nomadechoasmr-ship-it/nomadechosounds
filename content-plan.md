@@ -15,6 +15,14 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 ## Rule for every new article
 - Insert the Ko-fi note block (`<aside class="support">…A note from Andrey…</aside>`, copy it exactly from /tinnitus-masking-sounds/, including the photo) inside the article, right after the main "Listen" videos and before the medical note. Not only in the footer.
 
+- SEO head for every new article (copy the <head> of /recordings/mountain-river/ and change only the page-specific values):
+  - `<title>` at most 60 characters, key phrase first, no " · Nomad Echo Sounds" suffix if it pushes past 60.
+  - `<meta name="description">` at most 160 characters.
+  - Keep the favicon / apple-touch-icon / manifest / theme-color lines exactly as they are.
+  - `og:image` = one of the 16:9 files in /assets/share/ (pick the photo that fits the topic), with og:image:width 900 / height 506.
+  - JSON-LD as an `@graph`: the Article with `image` (the 16x9, 4x3 and 1x1 versions of the same photo), `author` = the Person node for Andrey (with sameAs YouTube), `publisher` = {"@id":"https://nomadechosounds.com/#org"}, plus the Organization node. Copy both nodes from /recordings/mountain-river/.
+  - Add the new URL to sitemap.xml with today's date as lastmod, and update the lastmod of any existing page you change.
+
 ## Queue
 
 - [x] 1. Mountain Brook — recording page with full measurements. Slug: /recordings/mountain-brook/

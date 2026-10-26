@@ -29,7 +29,7 @@ jobs:
           if git diff --quiet; then echo "No changes"; exit 0; fi
           git config user.name "nomadechoasmr-ship-it"
           git config user.email "nomadechoasmr-ship-it@users.noreply.github.com"
-          git add data/videos.json library/index.html
+          git add data/videos.json library/index.html sitemap.xml
           git commit -m "Update video library from channel feed"
           git push
       - name: Assemble site (public files only)
