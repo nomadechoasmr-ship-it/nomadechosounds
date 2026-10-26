@@ -19,7 +19,7 @@ FONTS = ROOT / "scripts" / "fonts"
 PINS = {
     "/nature-sound-measurements/": ("big-almaty-stone-moss", "Mountain brook 0.31 dB vs birdsong 3.73 dB"),
     "/tinnitus-masking-sounds/": ("big-almaty-stream-foam", "We measured real mountain water"),
-    "/birdsong-for-sleep/": ("ile-alatau-spruce-slope", "42 loud events every minute"),
+    "/birdsong-for-sleep/": ("tian-shan-spruce-blue-sky", "42 loud events every minute"),
     "/recordings/mountain-brook/": ("big-almaty-clear-pebbles", "0.31 dB loudness variation"),
     "/recordings/mountain-river/": ("big-almaty-cascade", "Loud but constant: 0.62 dB"),
     "/tian-shan-field-recordings/": ("big-almaty-gorge-autumn-stream", "Big Almaty gorge, 1,466 m"),
@@ -29,8 +29,17 @@ PINS = {
 PIN_VERSION = {
     "/nature-sound-measurements/": 2, "/tinnitus-masking-sounds/": 2,
     "/recordings/mountain-brook/": 2, "/recordings/mountain-river/": 2,
-    "/tian-shan-field-recordings/": 2,
+    "/tian-shan-field-recordings/": 2, "/birdsong-for-sleep/": 2,
 }
+# Extra pins for the same article with a different photo and subtitle
+# (Pinterest favours several fresh pins per URL). (path, tag, photo, subtitle)
+PIN_EXTRA = [
+    ("/tinnitus-masking-sounds/", "b", "gorge-clear-pool-ripples", "Steady water, measured in decibels"),
+    ("/tian-shan-field-recordings/", "b", "kapchagay-turquoise-red-rocks", "Kapchagay reservoir, Kazakhstan"),
+    ("/tian-shan-field-recordings/", "c", "mossy-spring-drops-macro", "A secret mossy spring in the Tian Shan"),
+    ("/recordings/mountain-river/", "b", "gorge-sunlit-cascade", "Real mountain water, no AI audio"),
+    ("/nature-sound-measurements/", "b", "kapchagay-waves-red-gravel", "Waves, brooks and birds, measured"),
+]
 DEFAULT_SUB = "Real field recordings from the Tian Shan"
 
 
@@ -75,7 +84,7 @@ def make_pin(slug, photo, title, sub):
     return out
 
 
-def page_info(url):
+def page_info(url, extra=None):
     path = url.replace(SITE, "") or "/"
     if path in SKIP:
         return None
@@ -93,6 +102,10 @@ def page_info(url):
     photo, sub = PINS.get(path, (img.group(1), DEFAULT_SUB))
     title = html.unescape(title)
     slug = path.strip("/").replace("/", "-")
+    guid = url + (f"#pin{PIN_VERSION[path]}" if path in PIN_VERSION else "")
+    if extra:
+        tag, photo, sub = extra
+        slug, guid = f"{slug}-{tag}", f"{url}#pin-{tag}"
     try:
         pin = make_pin(slug, photo, title, sub)
         image = f"{SITE}/assets/pins/{slug}.jpg"
@@ -102,7 +115,7 @@ def page_info(url):
         image = f"{SITE}/assets/img/{photo}.jpg"
     return {
         "title": title, "desc": html.unescape(desc), "link": url,
-        "guid": url + (f"#pin{PIN_VERSION[path]}" if path in PIN_VERSION else ""),
+        "guid": guid,
         "image": image, "length": pin.stat().st_size,
         "date": datetime.datetime.fromisoformat(date.group(1) + "T09:00:00+05:00"),
     }
@@ -110,7 +123,13 @@ def page_info(url):
 
 def main():
     xml = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
-    items = [i for i in (page_info(u) for u in re.findall(r"<loc>([^<]+)</loc>", xml)) if i]
+    urls = re.findall(r"<loc>([^<]+)</loc>", xml)
+    items = [i for i in (page_info(u) for u in urls) if i]
+    for path, tag, photo, sub in PIN_EXTRA:
+        if SITE + path in urls:
+            i = page_info(SITE + path, (tag, photo, sub))
+            if i:
+                items.append(i)
     items.sort(key=lambda i: i["date"], reverse=True)
     esc = lambda t: html.escape(t, quote=False)
     out = ['<?xml version="1.0" encoding="UTF-8"?>',
