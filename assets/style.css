@@ -118,3 +118,7 @@ footer a{color:var(--muted)}
 .support .avatar img{display:block;width:100%;height:auto;border-radius:4px}
 .support-body{display:grid;gap:8px}
 @media (max-width:560px){.support.has-photo{grid-template-columns:1fr;gap:12px}.support .avatar{width:110px}}
+
+.photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0}
+.photo-pair .photo img{max-height:none}
+@media (max-width:520px){.photo-pair{grid-template-columns:1fr}}
