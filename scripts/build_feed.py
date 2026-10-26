@@ -40,6 +40,28 @@ PIN_EXTRA = [
     ("/recordings/mountain-river/", "b", "gorge-sunlit-cascade", "Real mountain water, no AI audio"),
     ("/nature-sound-measurements/", "b", "kapchagay-waves-red-gravel", "Waves, brooks and birds, measured"),
 ]
+# Drip queue: extra pins released a few per day so Pinterest sees a steady
+# trickle instead of a burst from a new account. The feed is rebuilt every day
+# by the scheduled deploy; each entry appears on its release date.
+# (path, tag, photo, subtitle) -- tags must be unique per path.
+DRIP_START = datetime.date(2026, 10, 27)
+DRIP_PER_DAY = 2
+PIN_DRIP = [
+    ("/tinnitus-masking-sounds/", "d1", "gorge-waterfall-foam", "Brook 0.31 dB vs birdsong 3.73 dB"),
+    ("/tian-shan-field-recordings/", "d1", "kapchagay-zoom-h5-in-water", "A recorder standing in the lake"),
+    ("/recordings/mountain-brook/", "d1", "gorge-mossy-rock-pool", "Zero sudden peaks above 6 dB"),
+    ("/birdsong-for-sleep/", "d1", "tian-shan-spruce-meadow-stream", "Why a dawn chorus keeps you awake"),
+    ("/nature-sound-measurements/", "d1", "clear-shallows-ripples", "Open data: download the CSV"),
+    ("/recordings/mountain-river/", "d1", "gorge-stream-setup-mossy-boulders", "20 minutes measured, 0.6 dB drift"),
+    ("/tian-shan-field-recordings/", "d2", "mossy-pipe-setup", "The old pipe spring in the moss"),
+    ("/tinnitus-masking-sounds/", "d2", "kapchagay-lake-waves", "Steady water vs sudden sounds"),
+    ("/recordings/mountain-brook/", "d2", "gorge-tripod-stream", "How we measured a mountain brook"),
+    ("/birdsong-for-sleep/", "d2", "ile-alatau-spruce-snow-peaks", "Birdsong vs a mountain brook, measured"),
+    ("/tian-shan-field-recordings/", "d3", "recorder-tall-grass", "Recording in the long grass"),
+    ("/recordings/mountain-river/", "d2", "gorge-cliff-setup", "Recorded at a good level: -6.2 dBFS peak"),
+    ("/nature-sound-measurements/", "d2", "kapchagay-gravel-shore-setup", "Every take is measured before use"),
+    ("/tian-shan-field-recordings/", "d4", "kapchagay-red-rock-bay", "Red rocks of the Kapchagay shore"),
+]
 DEFAULT_SUB = "Real field recordings from the Tian Shan"
 
 
@@ -129,6 +151,14 @@ def main():
         if SITE + path in urls:
             i = page_info(SITE + path, (tag, photo, sub))
             if i:
+                items.append(i)
+    today = datetime.datetime.now(datetime.timezone.utc).date()
+    for n, (path, tag, photo, sub) in enumerate(PIN_DRIP):
+        release = DRIP_START + datetime.timedelta(days=n // DRIP_PER_DAY)
+        if release <= today and SITE + path in urls:
+            i = page_info(SITE + path, (tag, photo, sub))
+            if i:
+                i["date"] = datetime.datetime.fromisoformat(release.isoformat() + "T09:00:00+05:00")
                 items.append(i)
     items.sort(key=lambda i: i["date"], reverse=True)
     esc = lambda t: html.escape(t, quote=False)
