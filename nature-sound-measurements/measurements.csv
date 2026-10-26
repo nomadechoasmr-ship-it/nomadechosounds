@@ -1,0 +1,4 @@
+recording,place,year,recorder,analysed_section,loudness_variation_db,spread_p95_p5_db,sudden_peaks_over_6db,sudden_peaks_over_10db,tone_centre_hz,drift_db_rms,energy_below_40hz_percent,left_right_balance_db,verdict,notes_url
+Mountain Brook,"Tian Shan, near Almaty, Kazakhstan",2026,"Zoom H5, WAV 48 kHz / 24-bit",85 s excerpt of an 18 min take,0.31,1.04,0 windows,0 windows,1115-1136,0.2,0.059,+3.5 (left louder; corrected),used,https://nomadechosounds.com/recordings/mountain-brook/
+Mountain River,"Tian Shan, near Almaty, Kazakhstan",2026,"Zoom H5, WAV 48 kHz / 24-bit",20 min core section (4-24 min) of a 26.3 min take,0.62,2.04,0.031% of windows,0.000% of windows,1142-1182,0.6,0.04,-0.46 (corrected),used,https://nomadechosounds.com/recordings/mountain-river/
+Dawn birdsong,"City, at first light",,,2 min recording,3.73,12.83,42 loud events per minute,,2217-4238,,,,rejected,https://nomadechosounds.com/birdsong-for-sleep/

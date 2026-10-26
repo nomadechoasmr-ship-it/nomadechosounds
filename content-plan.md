@@ -23,6 +23,10 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
   - JSON-LD as an `@graph`: the Article with `image` (the 16x9, 4x3 and 1x1 versions of the same photo), `author` = the Person node for Andrey (with sameAs YouTube), `publisher` = {"@id":"https://nomadechosounds.com/#org"}, plus the Organization node. Copy both nodes from /recordings/mountain-river/.
   - Add the new URL to sitemap.xml with today's date as lastmod, and update the lastmod of any existing page you change.
 
+- Answer first: the first paragraph of every article starts with "<b>Short answer:</b>" and answers the page's question in 2–3 plain sentences with the key number(s). AI search engines and Google quote this paragraph, so it must make sense on its own.
+- Measurement data page: whenever an article reports measurements of a recording that is not yet in /nature-sound-measurements/, add a column to its table and a row to measurements.csv (same units, "—" or empty if not measured), update "Updated <date>" and dateModified there, and its sitemap lastmod.
+- Titles for "best" and comparison articles end with the current year in brackets, e.g. "(2026)". Do not add a year to other titles.
+
 ## Queue
 
 - [x] 1. Mountain Brook — recording page with full measurements. Slug: /recordings/mountain-brook/
@@ -53,3 +57,9 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 ## Done
 - 2026-10-20: Mountain Brook recording notes — https://nomadechosounds.com/recordings/mountain-brook/
 - 2026-10-23: Mountain River recording notes — https://nomadechosounds.com/recordings/mountain-river/
+- [ ] 6. Best natural sounds for tinnitus (2026): ranked by our own measurements. Slug: /best-natural-sounds-for-tinnitus/
+  - Rank only recordings that are on /nature-sound-measurements/ (brook first, river second, birdsong last with why). Link the data page. Short answer first.
+  - Cite the same research as /tinnitus-masking-sounds/ (Henry et al. 2004; Wan Mohamad et al. 2018). No medical claims beyond them.
+- [ ] 7. Brook vs river vs birdsong for sleep: a measured comparison (2026). Slug: /brook-vs-river-vs-birdsong-sleep/
+  - One comparison table from the data page, then which to choose when (headphones vs speaker, light vs heavy sleeper — keep this as practical listening advice, not medical advice).
+- [ ] 8. BLOCKED until the owner supplies measurements of the noise tracks: White vs pink vs brown noise vs water sounds for tinnitus (2026). Slug: /white-pink-brown-noise-vs-water-tinnitus/

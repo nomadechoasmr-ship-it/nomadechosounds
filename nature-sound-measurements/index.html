@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How Steady Are Nature Sounds? Our Measurement Data (2026)</title>
+<meta name="description" content="Open measurement data for real field recordings: loudness variation, sudden peaks, tone drift and low rumble for a mountain brook, a river and dawn birdsong.">
+<link rel="canonical" href="https://nomadechosounds.com/nature-sound-measurements/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How steady are nature sounds? Our measurement data">
+<meta property="og:description" content="A mountain brook varies by 0.31 dB. Dawn birdsong varies by 3.73 dB with 42 loud events a minute. The full numbers, the method and a CSV.">
+<meta property="og:url" content="https://nomadechosounds.com/nature-sound-measurements/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#121b2c">
+<meta property="og:site_name" content="Nomad Echo Sounds">
+<meta property="og:image" content="https://nomadechosounds.com/assets/share/ile-alatau-valley-stream-16x9.jpg">
+<meta property="og:image:width" content="900">
+<meta property="og:image:height" content="506">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/style.css?v=7">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Article","headline":"How steady are nature sounds? Our measurement data","datePublished":"2026-10-26","dateModified":"2026-10-26","image":["https://nomadechosounds.com/assets/share/ile-alatau-valley-stream-16x9.jpg","https://nomadechosounds.com/assets/share/ile-alatau-valley-stream-4x3.jpg","https://nomadechosounds.com/assets/share/ile-alatau-valley-stream-1x1.jpg"],"author":{"@type":"Person","@id":"https://nomadechosounds.com/about/#andrey","name":"Andrey","url":"https://nomadechosounds.com/about/","sameAs":["https://www.youtube.com/@NomadEchoASMR"]},"publisher":{"@id":"https://nomadechosounds.com/#org"},"mainEntityOfPage":"https://nomadechosounds.com/nature-sound-measurements/","about":{"@id":"https://nomadechosounds.com/nature-sound-measurements/#dataset"}},
+{"@type":"Dataset","@id":"https://nomadechosounds.com/nature-sound-measurements/#dataset","name":"Nomad Echo nature sound steadiness measurements","description":"Measurements of real outdoor field recordings (a mountain brook and a mountain river in the Tian Shan near Almaty, Kazakhstan, and a dawn birdsong recording): loudness variation (standard deviation of level in 400 ms windows), P95–P5 spread, sudden peaks above 6 and 10 dB over the median level, spectral centroid range, level drift, energy below 40 Hz and left/right balance. Collected to choose recordings for sleep and tinnitus masking tracks.","url":"https://nomadechosounds.com/nature-sound-measurements/","keywords":["nature sounds","tinnitus masking","sleep sounds","field recording","loudness variation","sound measurement"],"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"creator":{"@id":"https://nomadechosounds.com/about/#andrey"},"publisher":{"@id":"https://nomadechosounds.com/#org"},"spatialCoverage":"Northern Tian Shan (Ile Alatau), Almaty Region, Kazakhstan","temporalCoverage":"2026","dateModified":"2026-10-26","variableMeasured":["Loudness variation (dB)","Spread P95–P5 (dB)","Sudden peaks over 6 dB","Sudden peaks over 10 dB","Spectral centroid (Hz)","Drift (dB RMS)","Energy below 40 Hz (%)","Left/right balance (dB)"],"distribution":{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://nomadechosounds.com/nature-sound-measurements/measurements.csv"}},
+{"@type":"Organization","@id":"https://nomadechosounds.com/#org","name":"Nomad Echo Sounds","url":"https://nomadechosounds.com/","logo":{"@type":"ImageObject","url":"https://nomadechosounds.com/assets/icon-512.png","width":512,"height":512},"sameAs":["https://www.youtube.com/@NomadEchoASMR","https://ko-fi.com/nomadecho"]}
+]}
+</script>
+</head>
+<body>
+<header class="night compact">
+  <div class="moon" aria-hidden="true"></div>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="brand" href="/">Nomad Echo Sounds</a>
+      <ul>
+        <li><a href="/tinnitus-masking-sounds/">Tinnitus guide</a></li>
+        <li><a href="/library/">Library</a></li>
+        <li><a href="/tian-shan-field-recordings/">Where we record</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <span class="label">Data · Measurements</span>
+      <h1>How steady are nature sounds? Our measurement data</h1>
+      <p class="meta" style="color:var(--night-muted)">Updated 26 October 2026 · 5 min read</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <article class="prose">
+    <p><b>Short answer:</b> steady flowing water is far more even than birdsong. Our Mountain Brook recording varied in loudness by only 0.31 dB and had no sudden peaks at all. A dawn birdsong recording varied by 3.73 dB, twelve times more, with 42 loud events every minute. For sleep and tinnitus masking, where any change in the sound pulls your attention back, that difference is the whole story.</p>
+    <p>We record every sound on this site ourselves, outdoors, and we measure each recording before it becomes a long track. This page collects all of those numbers in one table, explains how they were measured, and lets you <a href="/nature-sound-measurements/measurements.csv">download them as a CSV</a>. It grows as we measure new recordings.</p>
+
+    <h2>All measurements</h2>
+    <div class="tablebox">
+      <table>
+        <thead><tr><th>Measure</th><th>Mountain Brook</th><th>Mountain River</th><th>Dawn birdsong</th></tr></thead>
+        <tbody>
+          <tr><td>Loudness variation</td><td class="num">0.31 dB</td><td class="num">0.62 dB</td><td class="num">3.73 dB</td></tr>
+          <tr><td>Spread (P95–P5)</td><td class="num">1.04 dB</td><td class="num">2.04 dB</td><td class="num">12.83 dB</td></tr>
+          <tr><td>Sudden peaks &gt;6 dB</td><td class="num">none</td><td class="num">0.031%</td><td class="num">42 per min</td></tr>
+          <tr><td>Sudden peaks &gt;10 dB</td><td class="num">none</td><td class="num">0.000%</td><td class="num">—</td></tr>
+          <tr><td>Tone centre</td><td class="num">1115–1136 Hz</td><td class="num">1142–1182 Hz</td><td class="num">2217–4238 Hz</td></tr>
+          <tr><td>Drift</td><td class="num">0.2 dB RMS</td><td class="num">0.6 dB RMS</td><td class="num">—</td></tr>
+          <tr><td>Energy below 40 Hz</td><td class="num">0.059%</td><td class="num">0.04%</td><td class="num">—</td></tr>
+          <tr><td>Left / right balance</td><td class="num">L +3.5 dB</td><td class="num">−0.46 dB</td><td class="num">—</td></tr>
+          <tr><td>Analysed</td><td class="num">85 s excerpt</td><td class="num">20 min</td><td class="num">2 min</td></tr>
+          <tr><td>Verdict</td><td><span class="pill ok">Used</span></td><td><span class="pill ok">Used</span></td><td><span class="pill no">Rejected</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">Lower is steadier for every row except balance, where closer to 0 dB is better. “—” means the measure was not reported for that recording. Both water recordings are from the Tian Shan near Almaty, 2026. Full notes: <a href="/recordings/mountain-brook/">Mountain Brook</a>, <a href="/recordings/mountain-river/">Mountain River</a>, <a href="/birdsong-for-sleep/">dawn birdsong</a>.</p>
+
+    <h2>What each number means</h2>
+    <ul>
+      <li><b>Loudness variation</b> is the standard deviation of the level, measured in 400 ms windows. It answers one question: how much does the sound move from moment to moment? A third of a decibel is a tiny movement. Several decibels is a sound that keeps changing.</li>
+      <li><b>Spread (P95–P5)</b> is the gap between the loud end (95th percentile) and the quiet end (5th percentile) of those windows. A large spread means quiet gaps followed by loud moments. For tinnitus, the gaps matter as much as the peaks, because the ringing comes back in them.</li>
+      <li><b>Sudden peaks</b> are windows more than 6 dB (or 10 dB) above the median level: a splash, a knock, a bird call. Water that is broken into fine foam produces almost none.</li>
+      <li><b>Tone centre</b> is the spectral centroid, roughly the “pitch” of the whole sound. A narrow range means the character of the sound holds still. Birdsong sat between about 2,200 and 4,200 Hz, the range human hearing is most sensitive to, and kept jumping inside it.</li>
+      <li><b>Drift</b> is how far the level wanders over the whole measured section. It catches a stream that slowly gets louder as snowmelt rises.</li>
+      <li><b>Energy below 40 Hz</b> is the share of energy in the deep rumble range, where wind and distant traffic show up. Near zero means a clean recording.</li>
+      <li><b>Left / right balance</b> matters in headphones. The brook leaned 3.5 dB to the left, which you would feel over a night, so we corrected it before looping.</li>
+    </ul>
+
+    <h2>How we measured</h2>
+    <p>The water recordings were made on a Zoom H5 as WAV files at 48 kHz / 24-bit, outdoors, on weekdays when the valleys are quiet. Spoken slates at the start and end of each take are left out of the analysed section. The flaws the numbers reveal, like the brook's channel imbalance, are what we then fix in preparation.</p>
+    <p>We use the numbers to decide what becomes a long sleep or masking track. There is no single pass mark. A recording is used when it has low loudness variation, no real sudden peaks, a stable tone and clean low end. Anything that keeps changing, like birdsong, is rejected for all-night use however pleasant it sounds.</p>
+
+    <h2>Limits of this data</h2>
+    <ul>
+      <li>Each sound is one recording at one place and time. Another brook, or the same brook in a different month, will measure differently.</li>
+      <li>The analysed sections differ in length: 85 seconds for the brook, 20 minutes for the river, 2 minutes for the birdsong. Longer sections are more representative.</li>
+      <li>These are acoustic measurements, not a clinical test. They show which sounds are steady, not how any one person's tinnitus will respond. The research behind steady sounds for masking is summarised in our <a href="/tinnitus-masking-sounds/">tinnitus masking guide</a>.</li>
+    </ul>
+
+    <h2>Coming next</h2>
+    <p>We plan to add lake waves from the Kapchagay shore, rain and a slow marsh stream to this table, measured the same way. The update date at the top of the page shows when the data last changed.</p>
+
+    <h2>Using this data</h2>
+    <p>The measurement numbers on this page and in the CSV are free to reuse under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a> with a link back to this page. This covers the numbers only, not the recordings themselves. Suggested citation:</p>
+    <p class="caption">Nomad Echo Sounds (2026). <i>How steady are nature sounds? Measurement data for real field recordings.</i> https://nomadechosounds.com/nature-sound-measurements/</p>
+
+    <h2>Listen</h2>
+    <div class="videos">
+      <div class="video"><div class="thumb"><iframe src="https://www.youtube-nocookie.com/embed/i1Un95nTRa0" title="Mountain Brook, Nomad Echo" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="info"><b>Mountain Brook</b><span>Black screen · real recorded water</span></div></div>
+      <div class="video"><div class="thumb"><iframe src="https://www.youtube-nocookie.com/embed/GM9wlcADK_s" title="Mountain River, Nomad Echo" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="info"><b>Mountain River</b><span>Black screen · real recorded water</span></div></div>
+    </div>
+    <p class="caption">More recordings, grouped by sound, are in the <a href="/library/">library</a>.</p>
+
+    <aside class="support has-photo" aria-label="Support the recordings">
+      <picture class="avatar"><source srcset="/assets/img/andrey-zoom-h5-hands-thumb.webp" type="image/webp"><img src="/assets/img/andrey-zoom-h5-hands-thumb.jpg" alt="Andrey's hands fitting a fur windscreen on the Zoom H5 recorder before a take" width="240" height="300" loading="lazy"></picture>
+      <div class="support-body">
+      <span class="from">A note from Andrey</span>
+      <p>Hi, I'm Andrey, the sound recordist behind these tracks. I live in Almaty and drive out to the Tian Shan and Kapchagay as often as I can. A good take often needs several trips before the water, the wind and the silence all line up.</p>
+      <p>Everything here stays free. If a recording helped you sleep or quieted the ringing, you can buy me a coffee. It pays for fuel to get to the next stream.</p>
+      <a class="kofi" href="https://ko-fi.com/nomadecho" rel="noopener">Buy me a coffee on Ko-fi →</a>
+      </div>
+    </aside>
+    <div class="note">This page shares how we record and measure sound. It is not medical advice. If your tinnitus is new, changes suddenly, or affects one ear only, see a doctor or audiologist. Keep masking sounds at a comfortable volume.</div>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="/">Nomad Echo Sounds</a> · Field recordings from Kazakhstan · No AI-generated audio · <a href="/about/">About</a></p>
+    <p>Content on this site is for relaxation and general information. It is not a substitute for professional medical care.</p>
+    <p>Enjoy the recordings? You can <a href="https://ko-fi.com/nomadecho" rel="noopener">support the next field trip on Ko-fi</a>.</p>
+  </div>
+</footer>
+</body>
+</html>
