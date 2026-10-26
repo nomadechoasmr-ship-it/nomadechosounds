@@ -17,12 +17,19 @@ FONTS = ROOT / "scripts" / "fonts"
 # Optional per-page pin settings: a different photo than the page's share image
 # (so pins don't all look alike) and a short line with the key number.
 PINS = {
-    "/nature-sound-measurements/": ("andrey-zoom-h5-hands", "Mountain brook 0.31 dB vs birdsong 3.73 dB"),
-    "/tinnitus-masking-sounds/": ("zoom-h5-recording-setup", "We measured real mountain water"),
+    "/nature-sound-measurements/": ("big-almaty-stone-moss", "Mountain brook 0.31 dB vs birdsong 3.73 dB"),
+    "/tinnitus-masking-sounds/": ("big-almaty-stream-foam", "We measured real mountain water"),
     "/birdsong-for-sleep/": ("ile-alatau-spruce-slope", "42 loud events every minute"),
-    "/recordings/mountain-brook/": ("ile-alatau-mountain-stream", "0.31 dB loudness variation"),
-    "/recordings/mountain-river/": ("ile-alatau-valley-stream", "Loud but constant: 0.62 dB"),
-    "/tian-shan-field-recordings/": ("ile-alatau-valley-stream", "Ile Alatau, Kazakhstan"),
+    "/recordings/mountain-brook/": ("big-almaty-clear-pebbles", "0.31 dB loudness variation"),
+    "/recordings/mountain-river/": ("big-almaty-cascade", "Loud but constant: 0.62 dB"),
+    "/tian-shan-field-recordings/": ("big-almaty-gorge-autumn-stream", "Big Almaty gorge, 1,466 m"),
+}
+# Bump when a page's pin image changes: Pinterest only publishes items with a
+# new <guid>, so a new version makes it post the fresh pin (old pin stays).
+PIN_VERSION = {
+    "/nature-sound-measurements/": 2, "/tinnitus-masking-sounds/": 2,
+    "/recordings/mountain-brook/": 2, "/recordings/mountain-river/": 2,
+    "/tian-shan-field-recordings/": 2,
 }
 DEFAULT_SUB = "Real field recordings from the Tian Shan"
 
@@ -95,6 +102,7 @@ def page_info(url):
         image = f"{SITE}/assets/img/{photo}.jpg"
     return {
         "title": title, "desc": html.unescape(desc), "link": url,
+        "guid": url + (f"#pin{PIN_VERSION[path]}" if path in PIN_VERSION else ""),
         "image": image, "length": pin.stat().st_size,
         "date": datetime.datetime.fromisoformat(date.group(1) + "T09:00:00+05:00"),
     }
@@ -119,7 +127,7 @@ def main():
         out += ["<item>",
                 f"<title>{esc(i['title'])}</title>",
                 f"<link>{i['link']}</link>",
-                f'<guid isPermaLink="true">{i["link"]}</guid>',
+                f'<guid isPermaLink="false">{i["guid"]}</guid>',
                 f"<pubDate>{email.utils.format_datetime(i['date'])}</pubDate>",
                 f"<description>{esc(i['desc'])}</description>",
                 f'<enclosure url="{i["image"]}" length="{i["length"]}" type="image/jpeg"/>',
