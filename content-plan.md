@@ -47,20 +47,32 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 - [ ] 3. How to use a masking sound at night — practical guide with an FAQ block (FAQPage structured data that matches the visible text). Slug: /how-to-use-masking-sounds-at-night/
   - Speaker vs headphones, volume (comfortable, below the tinnitus or at the blend point as audiologist sources describe), timers, consistency.
   - MUST fetch and cite 2–3 authoritative sources (audiology/clinic/national health pages). No medical advice beyond what they say.
-- [ ] 4. Why we never use a compressor on nature recordings. Slug: /no-compressor-nature-recordings/
+- [ ] 4. How we record water sounds: our field setup. Slug: /how-we-record-water-sounds/ — PUBLISH ON FRIDAY 30 OCTOBER 2026.
+  - Title (max 60 chars), e.g. "How We Record Water Sounds: Our Field Setup". Short answer first: Zoom H5, fur windscreen, a little back from the water (or in it, at Kapchagay), long takes on quiet weekdays.
+  - Share image: /assets/share/kapchagay-zoom-h5-in-water-16x9.jpg (4x3 and 1x1 versions exist too). Add a PINS line in scripts/build_feed.py: ("kapchagay-zoom-h5-in-water", "Zoom H5 standing in the water") and a PIN_EXTRA line ("b", "gorge-stream-setup-mossy-boulders", "A recorder, a stone, a mountain stream").
+  - Facts you may use (owner-confirmed, do not add others, do not invent recorder settings, gain values, mic modes or EQ numbers):
+    - Audio: Zoom H5, WAV 48 kHz / 24-bit, always with a fur windscreen. Video separately on an iPhone 16 Pro in 4K. A full-size tripod with a phone holder, and a small flexible tripod.
+    - Placement: recorder on a stone or on the grass a short distance back from the water, so splashes blend into one layer. At the Kapchagay reservoir (near Konaev, Almaty Region, spring 2026) the recorder stood on the flexible tripod right in the shallow water to record small waves.
+    - Takes of about 20 minutes or more; a spoken slate at the start; the recordist walks away during a take so footsteps don't reach the recorder.
+    - Recording level example: Mountain River peaked at -6.2 dBFS with RMS -30.3 dBFS, so the final track needed only +2.1 dB gain (link /recordings/mountain-river/).
+    - Spots: weekdays, far enough from roads that engine noise disappears; even, foamy water rather than single splashes; every take is measured (link /nature-sound-measurements/).
+    - Places: Big Almaty gorge at 1,466 m (autumn 2026), the Alma-Arasan gorge, the mossy pipe spring (macro setup), Kapchagay shore.
+  - Photos to use (all in /assets/img, each has a .webp; width 1000 height 1500; use the .photo-pair layout from /tian-shan-field-recordings/ for pairs): kapchagay-zoom-h5-in-water, gorge-stream-setup-mossy-boulders, gorge-cliff-setup, mossy-spring-flex-tripod, mossy-pipe-setup, kapchagay-gravel-shore-setup, mossy-spring-macro-screen. Write honest alt text describing what is visible.
+  - Link to /tian-shan-field-recordings/ for the full field notes. Add the Ko-fi note block as for every article.
+- [ ] 5. Best natural sounds for tinnitus (2026): ranked by our own measurements. Slug: /best-natural-sounds-for-tinnitus/
+  - Rank only recordings that are on /nature-sound-measurements/ (brook first, river second, birdsong last with why). Link the data page. Short answer first.
+  - Cite the same research as /tinnitus-masking-sounds/ (Henry et al. 2004; Wan Mohamad et al. 2018). No medical claims beyond them.
+- [ ] 6. Brook vs river vs birdsong for sleep: a measured comparison (2026). Slug: /brook-vs-river-vs-birdsong-sleep/
+  - One comparison table from the data page, then which to choose when (headphones vs speaker, light vs heavy sleeper — keep this as practical listening advice, not medical advice).
+- [ ] 7. Why we never use a compressor on nature recordings. Slug: /no-compressor-nature-recordings/
   - A compressor lifts the background noise and recorder hiss of natural recordings and flattens natural dynamics; we use only trim, balance, a gentle high shelf and normalisation. Use the Mountain River level figures as the example.
-- [ ] 5. Stereo balance and why 3.5 dB matters in headphones over a night. Slug: /stereo-balance-sleep-sounds/
+- [ ] 8. Stereo balance and why 3.5 dB matters in headphones over a night. Slug: /stereo-balance-sleep-sounds/
   - Use the Mountain Brook imbalance (L +3.5 dB, correlation 0.58) and the fix. Keep claims about perception general and sourced.
-- [ ] 6. How we make noise colours from real water (no generated noise). Slug: /how-we-make-noise-from-real-water/
+- [ ] 9. How we make noise colours from real water (no generated noise). Slug: /how-we-make-noise-from-real-water/
   - Facts: noise tracks are made only from the owner's recordings of streams and of water running through an abandoned steel pipe left from dam construction on a Tian Shan riverbank; shaped by equalising, filtering and taming peaks in an editor. Embed the pipe short V0CaA8UVzHE (vertical, use the .short wrapper). Do not invent EQ settings or frequencies; describe the method in general terms only.
-- [ ] 7. Water vs brown noise: a measured comparison. BLOCKED — needs the owner's brown-noise file and a raw brook file to measure.
+- [ ] 10. Water vs brown noise: a measured comparison. BLOCKED — needs the owner's brown-noise file and a raw brook file to measure.
+- [ ] 11. BLOCKED until the owner supplies measurements of the noise tracks: White vs pink vs brown noise vs water sounds for tinnitus (2026). Slug: /white-pink-brown-noise-vs-water-tinnitus/
 
 ## Done
 - 2026-10-20: Mountain Brook recording notes — https://nomadechosounds.com/recordings/mountain-brook/
 - 2026-10-23: Mountain River recording notes — https://nomadechosounds.com/recordings/mountain-river/
-- [ ] 6. Best natural sounds for tinnitus (2026): ranked by our own measurements. Slug: /best-natural-sounds-for-tinnitus/
-  - Rank only recordings that are on /nature-sound-measurements/ (brook first, river second, birdsong last with why). Link the data page. Short answer first.
-  - Cite the same research as /tinnitus-masking-sounds/ (Henry et al. 2004; Wan Mohamad et al. 2018). No medical claims beyond them.
-- [ ] 7. Brook vs river vs birdsong for sleep: a measured comparison (2026). Slug: /brook-vs-river-vs-birdsong-sleep/
-  - One comparison table from the data page, then which to choose when (headphones vs speaker, light vs heavy sleeper — keep this as practical listening advice, not medical advice).
-- [ ] 8. BLOCKED until the owner supplies measurements of the noise tracks: White vs pink vs brown noise vs water sounds for tinnitus (2026). Slug: /white-pink-brown-noise-vs-water-tinnitus/
