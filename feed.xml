@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>Nomad Echo Sounds</title>
+<link>https://nomadechosounds.com/</link>
+<atom:link href="https://nomadechosounds.com/feed.xml" rel="self" type="application/rss+xml"/>
+<description>Real field recordings from the Tian Shan, Kazakhstan, measured for sleep and tinnitus masking. No AI audio.</description>
+<language>en</language>
+<lastBuildDate>Mon, 26 Oct 2026 09:00:00 +0500</lastBuildDate>
+<item>
+<title>How steady are nature sounds? Our measurement data</title>
+<link>https://nomadechosounds.com/nature-sound-measurements/</link>
+<guid isPermaLink="true">https://nomadechosounds.com/nature-sound-measurements/</guid>
+<pubDate>Mon, 26 Oct 2026 09:00:00 +0500</pubDate>
+<description>Open measurement data for real field recordings: loudness variation, sudden peaks, tone drift and low rumble for a mountain brook, a river and dawn birdsong.</description>
+<enclosure url="https://nomadechosounds.com/assets/pins/nature-sound-measurements.jpg" length="211494" type="image/jpeg"/>
+<media:content url="https://nomadechosounds.com/assets/pins/nature-sound-measurements.jpg" medium="image" type="image/jpeg" width="1000" height="1500"/>
+</item>
+<item>
+<title>Mountain River: recording notes and measurements</title>
+<link>https://nomadechosounds.com/recordings/mountain-river/</link>
+<guid isPermaLink="true">https://nomadechosounds.com/recordings/mountain-river/</guid>
+<pubDate>Fri, 23 Oct 2026 09:00:00 +0500</pubDate>
+<description>A loud but constant Tian Shan river, measured over 20 minutes: 0.62 dB loudness variation, no peaks above 10 dB, 0.6 dB drift, and the preparation chain.</description>
+<enclosure url="https://nomadechosounds.com/assets/pins/recordings-mountain-river.jpg" length="254749" type="image/jpeg"/>
+<media:content url="https://nomadechosounds.com/assets/pins/recordings-mountain-river.jpg" medium="image" type="image/jpeg" width="1000" height="1500"/>
+</item>
+<item>
+<title>Mountain Brook: recording notes and measurements</title>
+<link>https://nomadechosounds.com/recordings/mountain-brook/</link>
+<guid isPermaLink="true">https://nomadechosounds.com/recordings/mountain-brook/</guid>
+<pubDate>Tue, 20 Oct 2026 09:00:00 +0500</pubDate>
+<description>Our steadiest Tian Shan brook, measured: 0.31 dB loudness variation, no sudden peaks, one 3.5 dB channel imbalance we fixed, and the full preparation chain.</description>
+<enclosure url="https://nomadechosounds.com/assets/pins/recordings-mountain-brook.jpg" length="322359" type="image/jpeg"/>
+<media:content url="https://nomadechosounds.com/assets/pins/recordings-mountain-brook.jpg" medium="image" type="image/jpeg" width="1000" height="1500"/>
+</item>
+<item>
+<title>Which natural sounds mask tinnitus best?</title>
+<link>https://nomadechosounds.com/tinnitus-masking-sounds/</link>
+<guid isPermaLink="true">https://nomadechosounds.com/tinnitus-masking-sounds/</guid>
+<pubDate>Sun, 18 Oct 2026 09:00:00 +0500</pubDate>
+<description>We measured real mountain water recordings for loudness variation, sudden peaks and tone drift. Which natural sounds suit tinnitus masking, and which don't.</description>
+<enclosure url="https://nomadechosounds.com/assets/pins/tinnitus-masking-sounds.jpg" length="338608" type="image/jpeg"/>
+<media:content url="https://nomadechosounds.com/assets/pins/tinnitus-masking-sounds.jpg" medium="image" type="image/jpeg" width="1000" height="1500"/>
+</item>
+<item>
+<title>Is birdsong good for sleep? What the measurements show</title>
+<link>https://nomadechosounds.com/birdsong-for-sleep/</link>
+<guid isPermaLink="true">https://nomadechosounds.com/birdsong-for-sleep/</guid>
+<pubDate>Sun, 18 Oct 2026 09:00:00 +0500</pubDate>
+<description>A dawn chorus measured against a mountain brook: 42 loud events per minute and 12 times the loudness swing. Why birdsong works poorly for sleep.</description>
+<enclosure url="https://nomadechosounds.com/assets/pins/birdsong-for-sleep.jpg" length="243049" type="image/jpeg"/>
+<media:content url="https://nomadechosounds.com/assets/pins/birdsong-for-sleep.jpg" medium="image" type="image/jpeg" width="1000" height="1500"/>
+</item>
+<item>
+<title>Tian Shan field recordings: mountain water from the Ile Alatau</title>
+<link>https://nomadechosounds.com/tian-shan-field-recordings/</link>
+<guid isPermaLink="true">https://nomadechosounds.com/tian-shan-field-recordings/</guid>
+<pubDate>Sun, 18 Oct 2026 09:00:00 +0500</pubDate>
+<description>Where our mountain water sounds come from: spring 2026 field recordings at about 1,500 m in the Ile Alatau above Almaty, Kazakhstan, on a Zoom H5.</description>
+<enclosure url="https://nomadechosounds.com/assets/pins/tian-shan-field-recordings.jpg" length="259626" type="image/jpeg"/>
+<media:content url="https://nomadechosounds.com/assets/pins/tian-shan-field-recordings.jpg" medium="image" type="image/jpeg" width="1000" height="1500"/>
+</item>
+</channel>
+</rss>

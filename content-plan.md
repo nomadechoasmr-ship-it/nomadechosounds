@@ -23,6 +23,7 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
   - JSON-LD as an `@graph`: the Article with `image` (the 16x9, 4x3 and 1x1 versions of the same photo), `author` = the Person node for Andrey (with sameAs YouTube), `publisher` = {"@id":"https://nomadechosounds.com/#org"}, plus the Organization node. Copy both nodes from /recordings/mountain-river/.
   - Add the new URL to sitemap.xml with today's date as lastmod, and update the lastmod of any existing page you change.
 
+- Pinterest: feed.xml and the pin image in /assets/pins/ are built automatically on deploy from sitemap.xml. Optionally add a line to PINS in scripts/build_feed.py with a different photo and a short key-number subtitle for the new article.
 - Answer first: the first paragraph of every article starts with "<b>Short answer:</b>" and answers the page's question in 2–3 plain sentences with the key number(s). AI search engines and Google quote this paragraph, so it must make sense on its own.
 - Measurement data page: whenever an article reports measurements of a recording that is not yet in /nature-sound-measurements/, add a column to its table and a row to measurements.csv (same units, "—" or empty if not measured), update "Updated <date>" and dateModified there, and its sitemap lastmod.
 - Titles for "best" and comparison articles end with the current year in brackets, e.g. "(2026)". Do not add a year to other titles.

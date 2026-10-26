@@ -32,6 +32,10 @@ jobs:
           git add data/videos.json library/index.html sitemap.xml
           git commit -m "Update video library from channel feed"
           git push
+      - name: Build RSS feed and Pinterest pin images
+        run: |
+          pip install --quiet pillow
+          python scripts/build_feed.py
       - name: Assemble site (public files only)
         run: |
           mkdir _site
