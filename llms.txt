@@ -15,6 +15,7 @@
 
 ## About
 - [About Nomad Echo Sounds](https://nomadechosounds.com/about/): Who records these sounds, how they are measured, and how the site is written.
+- [AI Data Services](https://nomadechosounds.com/ai-data-collection/): A developing B2B service: collection of real-world audio, video, photo and regional language material in Kazakhstan and Central Asia for AI training. Scope agreed per project; contributor network being formed.
 
 ## Listen
 - [Nature sound library](https://nomadechosounds.com/library/): Every long-form recording, grouped by sound, playable on the page.

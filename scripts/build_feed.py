@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://nomadechosounds.com"
-SKIP = {"/", "/about/", "/library/", "/privacy/"}  # not articles
+SKIP = {"/", "/about/", "/library/", "/privacy/", "/ai-data-collection/"}  # not articles
 FONTS = ROOT / "scripts" / "fonts"
 # Optional per-page pin settings: a different photo than the page's share image
 # (so pins don't all look alike) and a short line with the key number.
