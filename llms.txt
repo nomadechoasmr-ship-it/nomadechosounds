@@ -4,6 +4,7 @@
 
 ## Guides
 - [Which natural sounds mask tinnitus best?](https://nomadechosounds.com/tinnitus-masking-sounds/): Measurements of real recordings (loudness variation, P95–P5 spread, transient counts, spectral centroid); which passed and why; preparation chain; research references.
+- [How to use a masking sound at night](https://nomadechosounds.com/how-to-use-masking-sounds-at-night/): Volume a little below the tinnitus, speaker vs pillow speaker vs headphones, timer vs all night, steady sounds; summarises Tinnitus UK and NHS advice with our measurements (L/R balance, drift, loop seam). FAQ.
 - [Is birdsong good for sleep?](https://nomadechosounds.com/birdsong-for-sleep/): A dawn birdsong recording measured against a mountain brook: 42 loud events per minute vs none, 3.73 dB vs 0.31 dB loudness variation.
 - [Tian Shan field recordings](https://nomadechosounds.com/tian-shan-field-recordings/): Where and how the recordings are made: Ile Alatau, about 1,500 m, spring 2026, equipment and spot selection.
 - [Mountain Brook: recording notes](https://nomadechosounds.com/recordings/mountain-brook/): Full measurements of our steadiest Tian Shan brook recording (0.31 dB loudness variation, no peaks >6 dB), the 3.5 dB channel imbalance fix and the preparation chain.

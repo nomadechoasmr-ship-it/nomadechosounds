@@ -44,7 +44,7 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
   - Core section (4–24 min): loudness variation 0.62 dB; P95–P5 2.04 dB; transients >6 dB 0.031%, >10 dB 0.000%; no tonal peaks.
   - Drift over 20 min 0.6 dB RMS; centroid 1142–1182 Hz; sub-40 Hz 0.04%; peak −6.2 dBFS, RMS −30.3 dBFS (recorded at a good level); L/R balance −0.46 dB.
   - Chain: keep 0:30–26:00, small channel-balance correction, high shelf −5 dB at 6 kHz, +2.1 dB normalisation, loop (about 18 repeats in a full night track).
-- [ ] 3. How to use a masking sound at night — practical guide with an FAQ block (FAQPage structured data that matches the visible text). Slug: /how-to-use-masking-sounds-at-night/
+- [x] 3. How to use a masking sound at night — practical guide with an FAQ block (FAQPage structured data that matches the visible text). Slug: /how-to-use-masking-sounds-at-night/
   - Speaker vs headphones, volume (comfortable, below the tinnitus or at the blend point as audiologist sources describe), timers, consistency.
   - MUST fetch and cite 2–3 authoritative sources (audiology/clinic/national health pages). No medical advice beyond what they say.
 - [ ] 4. How we record water sounds: our field setup. Slug: /how-we-record-water-sounds/ — PUBLISH ON FRIDAY 30 OCTOBER 2026.
@@ -76,3 +76,4 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 ## Done
 - 2026-10-20: Mountain Brook recording notes — https://nomadechosounds.com/recordings/mountain-brook/
 - 2026-10-23: Mountain River recording notes — https://nomadechosounds.com/recordings/mountain-river/
+- 2026-10-27: How to use a masking sound at night — https://nomadechosounds.com/how-to-use-masking-sounds-at-night/

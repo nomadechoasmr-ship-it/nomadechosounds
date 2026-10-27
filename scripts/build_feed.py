@@ -23,6 +23,7 @@ PINS = {
     "/recordings/mountain-brook/": ("big-almaty-clear-pebbles", "0.31 dB loudness variation"),
     "/recordings/mountain-river/": ("big-almaty-cascade", "Loud but constant: 0.62 dB"),
     "/tian-shan-field-recordings/": ("big-almaty-gorge-autumn-stream", "Big Almaty gorge, 1,466 m"),
+    "/how-to-use-masking-sounds-at-night/": ("ile-alatau-mountain-stream", "Volume a little below the ringing"),
 }
 # Bump when a page's pin image changes: Pinterest only publishes items with a
 # new <guid>, so a new version makes it post the fresh pin (old pin stays).
