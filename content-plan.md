@@ -54,6 +54,7 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
     - Audio: Zoom H5, WAV 48 kHz / 24-bit, always with a fur windscreen. Video separately on an iPhone 16 Pro in 4K. A full-size tripod with a phone holder, and a small flexible tripod.
     - Placement: recorder on a stone or on the grass a short distance back from the water, so splashes blend into one layer. At the Kapchagay reservoir (near Konaev, Almaty Region, spring 2026) the recorder stood on the flexible tripod right in the shallow water to record small waves.
     - Takes of about 20 minutes or more; a spoken slate at the start; the recordist walks away during a take so footsteps don't reach the recorder.
+    - Backstage Shorts from @NEFieldRecording (owner-confirmed, his own footage) to embed as <div class="short"> with youtube-nocookie: ltGrxAJ6UxI = Kapchagay reservoir shore, spring 2026 (put it in the Kapchagay/in-the-water part); N2j2vbMwyS0 = Maiden's Tears (Devichi Slyozy) waterfall, Alma-Arasan gorge. Do NOT state the waterfall's altitude (unconfirmed).
     - Recording level example: Mountain River peaked at -6.2 dBFS with RMS -30.3 dBFS, so the final track needed only +2.1 dB gain (link /recordings/mountain-river/).
     - Spots: weekdays, far enough from roads that engine noise disappears; even, foamy water rather than single splashes; every take is measured (link /nature-sound-measurements/).
     - Places: Big Almaty gorge at 1,466 m (autumn 2026), the Alma-Arasan gorge, the mossy pipe spring (macro setup), Kapchagay shore.
