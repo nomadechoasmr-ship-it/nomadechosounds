@@ -47,7 +47,7 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 - [x] 3. How to use a masking sound at night — practical guide with an FAQ block (FAQPage structured data that matches the visible text). Slug: /how-to-use-masking-sounds-at-night/
   - Speaker vs headphones, volume (comfortable, below the tinnitus or at the blend point as audiologist sources describe), timers, consistency.
   - MUST fetch and cite 2–3 authoritative sources (audiology/clinic/national health pages). No medical advice beyond what they say.
-- [ ] 4. How we record water sounds: our field setup. Slug: /how-we-record-water-sounds/ — PUBLISH ON FRIDAY 30 OCTOBER 2026.
+- [x] 4. How we record water sounds: our field setup. Slug: /how-we-record-water-sounds/ — PUBLISH ON FRIDAY 30 OCTOBER 2026.
   - Title (max 60 chars), e.g. "How We Record Water Sounds: Our Field Setup". Short answer first: Zoom H5, fur windscreen, a little back from the water (or in it, at Kapchagay), long takes on quiet weekdays.
   - Share image: /assets/share/kapchagay-zoom-h5-in-water-16x9.jpg (4x3 and 1x1 versions exist too). Add a PINS line in scripts/build_feed.py: ("kapchagay-zoom-h5-in-water", "Zoom H5 standing in the water") and a PIN_EXTRA line ("b", "gorge-stream-setup-mossy-boulders", "A recorder, a stone, a mountain stream").
   - Facts you may use (owner-confirmed, do not add others, do not invent recorder settings, gain values, mic modes or EQ numbers):
@@ -78,3 +78,4 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 - 2026-10-20: Mountain Brook recording notes — https://nomadechosounds.com/recordings/mountain-brook/
 - 2026-10-23: Mountain River recording notes — https://nomadechosounds.com/recordings/mountain-river/
 - 2026-10-27: How to use a masking sound at night — https://nomadechosounds.com/how-to-use-masking-sounds-at-night/
+- 2026-10-30: How we record water sounds: our field setup — https://nomadechosounds.com/how-we-record-water-sounds/

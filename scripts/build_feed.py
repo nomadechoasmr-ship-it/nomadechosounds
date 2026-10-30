@@ -24,6 +24,7 @@ PINS = {
     "/recordings/mountain-river/": ("big-almaty-cascade", "Loud but constant: 0.62 dB"),
     "/tian-shan-field-recordings/": ("big-almaty-gorge-autumn-stream", "Big Almaty gorge, 1,466 m"),
     "/how-to-use-masking-sounds-at-night/": ("ile-alatau-mountain-stream", "Volume a little below the ringing"),
+    "/how-we-record-water-sounds/": ("kapchagay-zoom-h5-in-water", "Zoom H5 standing in the water"),
 }
 # Bump when a page's pin image changes: Pinterest only publishes items with a
 # new <guid>, so a new version makes it post the fresh pin (old pin stays).
@@ -40,6 +41,7 @@ PIN_EXTRA = [
     ("/tian-shan-field-recordings/", "c", "mossy-spring-drops-macro", "A secret mossy spring in the Tian Shan"),
     ("/recordings/mountain-river/", "b", "gorge-sunlit-cascade", "Real mountain water, no AI audio"),
     ("/nature-sound-measurements/", "b", "kapchagay-waves-red-gravel", "Waves, brooks and birds, measured"),
+    ("/how-we-record-water-sounds/", "b", "gorge-stream-setup-mossy-boulders", "A recorder, a stone, a mountain stream"),
 ]
 # Drip queue: extra pins released a few per day so Pinterest sees a steady
 # trickle instead of a burst from a new account. The feed is rebuilt every day
