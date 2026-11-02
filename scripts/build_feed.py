@@ -101,6 +101,22 @@ BOARDS = {
          "River Sounds for Tinnitus: Loud but Constant Mountain Water",
          "Loud but constant river water", "0.62 dB loudness variation",
          "A loud mountain river that barely changes in level: 0.62 dB variation over 20 minutes. A strong, even sound for masking louder tinnitus."),
+        ("/tinnitus-masking-sounds/", "t3", "frame-mountain-river-mossy-boulders",
+         "Rushing Mountain River Sounds for Tinnitus Relief",
+         "Rushing river sounds for tinnitus", "Real water, no AI audio",
+         "A rushing mountain river among mossy boulders in the Tian Shan, Kazakhstan. Real field recordings for tinnitus masking, measured for steadiness."),
+        ("/how-to-use-masking-sounds-at-night/", "t2", "frame-water-drop-on-moss",
+         "Tinnitus at Night: How Loud Should a Masking Sound Be?",
+         "How loud should a masking sound be?", "Volume a little below the ringing",
+         "How loud to play a masking sound when tinnitus keeps you awake, speaker or headphones, and whether to use a timer. Based on Tinnitus UK and NHS guidance."),
+        ("/nature-sound-measurements/", "t2", "frame-clear-stream-pebbles",
+         "Steady Nature Sounds for Tinnitus: Open Measurement Data",
+         "Which water sound is steadiest?", "Open data, measured in dB",
+         "We measured our own field recordings for loudness variation and sudden peaks. Brook, river and birdsong compared, with a downloadable CSV."),
+        ("/recordings/mountain-brook/", "t2", "frame-moss-stream-red-pebbles",
+         "Gentle Stream Sounds for Tinnitus: Soft Water Over Moss",
+         "Soft stream water for tinnitus", "A steady Tian Shan brook",
+         "A gentle mountain brook from the Tian Shan with no sudden splashes, measured at 0.31 dB loudness variation. Natural sound for tinnitus masking."),
     ]),
     "sleep": ("Nature Sounds for Sleep", [
         ("/birdsong-for-sleep/", "s1", "ile-alatau-spruce-slope",
@@ -127,6 +143,22 @@ BOARDS = {
          "Calming Water Sounds for Sleep, Compared by Measurement",
          "Calming water sounds, compared", "Which one stays steady all night?",
          "Brook, river and birdsong compared by how steady they stay. Open measurement data from real nature recordings in Kazakhstan."),
+        ("/recordings/mountain-brook/", "s2", "frame-mossy-stones-shallow-water",
+         "Relaxing Water Sounds for Sleep: A Shallow Mountain Stream",
+         "Shallow stream sounds for sleep", "Real water from the Tian Shan",
+         "Clear, shallow mountain water over mossy stones, recorded in the Tian Shan near Almaty. A calm, even sound for falling asleep."),
+        ("/recordings/mountain-river/", "s2", "frame-mountain-stream-boulders",
+         "Mountain Stream Sounds for Sleep: Water Among Boulders",
+         "Mountain stream sounds for sleep", "Steady water, measured",
+         "A mountain stream rushing past boulders in the Tian Shan. Loud but constant water, recorded for sleep and measured before publishing."),
+        ("/tinnitus-masking-sounds/", "s1", "frame-boulder-pool-bubbles",
+         "Calm Water Sounds for Insomnia: Real, Not Generated",
+         "Calm water for sleepless nights", "Real field recordings, Kazakhstan",
+         "Real water sounds for nights when sleep won't come, recorded in Kazakhstan with no AI audio. How we choose steady sounds that don't wake the ear."),
+        ("/how-to-use-masking-sounds-at-night/", "s2", "frame-drips-through-branches",
+         "Falling Asleep to Water Sounds: Simple Tips for Every Night",
+         "Falling asleep to water sounds", "Volume, speaker, timer",
+         "Simple tips for falling asleep to water sounds: a comfortable volume, speaker or headphones, and when a timer helps."),
     ]),
     "tian-shan": ("Tian Shan Nature & Field Recording", [
         ("/tian-shan-field-recordings/", "n1", "big-almaty-gorge-autumn-stream",
@@ -145,14 +177,26 @@ BOARDS = {
          "Nature Sound Recording: A Zoom H5 at a Mossy Mountain Spring",
          "Recording a mountain spring", "A flexible tripod, close to the water",
          "Recording a tiny mossy spring in the Tian Shan with a Zoom H5 on a flexible tripod. How we place the recorder for clean water sounds."),
-        ("/tian-shan-field-recordings/", "n3", "ile-alatau-spruce-snow-peaks",
+        ("/recordings/mountain-brook/", "n3", "ile-alatau-spruce-snow-peaks",
          "Tian Shan Mountains Near Almaty: Spruce Forest and Snow Peaks",
          "Tian Shan mountains near Almaty", "Ile Alatau, Kazakhstan",
          "Spruce forest and snow peaks of the Ile Alatau, the Tian Shan range above Almaty, Kazakhstan, where our mountain stream recordings come from."),
-        ("/tian-shan-field-recordings/", "n4", "mossy-spring-drops-macro",
+        ("/how-we-record-water-sounds/", "n4", "mossy-spring-drops-macro",
          "A Hidden Mossy Spring in the Tian Shan Mountains",
          "A hidden mossy spring", "Water from an old pipe in the moss",
          "A secret spring in the Tian Shan: water running from an old pipe overgrown with moss. One of the places our nature sounds come from."),
+        ("/tian-shan-field-recordings/", "n5", "frame-old-pipe-spring-drips",
+         "An Old Rusty Pipe Turned Mountain Spring, Tian Shan",
+         "An old pipe turned into a spring", "Overgrown with moss, Tian Shan",
+         "Water dripping from an old Soviet-era pipe on a Tian Shan riverbank, now overgrown with moss. One of the places our nature sounds come from."),
+        ("/recordings/mountain-river/", "n6", "frame-tian-shan-spruce-slope",
+         "Spruce Forest on a Tian Shan Slope Near Almaty",
+         "Spruce forest of the Tian Shan", "Ile Alatau, Kazakhstan",
+         "Tian Shan spruce on a steep rocky slope above Almaty, Kazakhstan. The mountains where we record river and stream sounds."),
+        ("/recordings/mountain-brook/", "n7", "frame-mossy-spring-water-gold",
+         "Macro Water Photography: A Mossy Spring in Sunlight",
+         "A mossy spring in sunlight", "Filmed while recording its sound",
+         "Sunlit water running over moss at a small spring in the Tian Shan, filmed while we recorded its sound."),
     ]),
 }
 
@@ -297,7 +341,7 @@ def build_boards(urls, today):
                 continue
             slug = f"{board}-{path.strip('/').replace('/', '-')}-{tag}"
             try:
-                maker = make_photo_pin if board in PHOTO_BOARDS else make_pin
+                maker = make_photo_pin if board in PHOTO_BOARDS and not photo.startswith("frame-") else make_pin  # video frames are too small for full-height pins
                 pin = maker(slug, photo, headline, sub)
                 image = f"{SITE}/assets/pins/{slug}.jpg"
             except Exception as exc:
