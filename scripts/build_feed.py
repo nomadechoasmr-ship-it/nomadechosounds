@@ -67,6 +67,95 @@ PIN_DRIP = [
 ]
 DEFAULT_SUB = "Real field recordings from the Tian Shan"
 
+# Topic boards. Each board on Pinterest auto-publishes from its own feed
+# (/feeds/<board>.xml). Pins here use search-style titles (what people type on
+# Pinterest), not article titles, and spread across different pages instead of
+# repeating one URL. Released 1 per day per board from BOARD_START, so the
+# account posts a steady 3 pins a day. Add new rows at the end of a list to
+# continue the queue. (path, tag, photo, pin title, headline on image, subtitle, description)
+BOARD_START = datetime.date(2026, 11, 3)
+PHOTO_BOARDS = {"tian-shan", "sleep"}  # full-photo pins; tinnitus keeps the text panel
+BOARDS = {
+    "tinnitus": ("Tinnitus Relief Sounds", [
+        ("/tinnitus-masking-sounds/", "t1", "big-almaty-stream-foam",
+         "Tinnitus Relief Sounds: Real Mountain Water, Not AI Noise",
+         "Tinnitus relief sounds from real mountain water", "Recorded in the Tian Shan, measured in dB",
+         "Natural sounds for tinnitus masking, recorded in the Tian Shan mountains of Kazakhstan. We measured how steady each sound is, because sudden peaks pull attention back to the ringing. Free to listen."),
+        ("/how-to-use-masking-sounds-at-night/", "t1", "ile-alatau-valley-stream",
+         "How to Sleep with Tinnitus: Using a Masking Sound at Night",
+         "How to sleep with tinnitus", "Speaker or headphones, volume, timer",
+         "A practical guide to using a masking sound at night when tinnitus keeps you awake: speaker or headphones, how loud, and whether to use a timer. Based on Tinnitus UK and NHS guidance."),
+        ("/nature-sound-measurements/", "t1", "gorge-mossy-rock-pool",
+         "Best Nature Sounds for Tinnitus Masking: We Measured Them",
+         "Which nature sounds mask tinnitus best?", "Brook 0.31 dB vs birdsong 3.73 dB",
+         "Mountain brook, river and birdsong compared by loudness variation and sudden peaks. Open data from real field recordings made near Almaty, Kazakhstan."),
+        ("/recordings/mountain-brook/", "t1", "ile-alatau-mountain-stream",
+         "Mountain Brook Sound for Tinnitus: Steady Water, No Sudden Peaks",
+         "A steady brook for ringing ears", "Zero sudden peaks above 6 dB",
+         "A mountain brook from the Tian Shan, measured: 0.31 dB loudness variation and no sudden peaks, the kind of even sound tinnitus guides recommend for masking."),
+        ("/tinnitus-masking-sounds/", "t2", "mossy-spring-water-threads",
+         "Natural White Noise Alternative for Tinnitus: Flowing Water",
+         "A natural alternative to white noise", "Real water from the Tian Shan mountains",
+         "Prefer something softer than white noise for tinnitus? Flowing mountain water is a steady natural sound. Recorded and measured by a field recordist in Kazakhstan."),
+        ("/recordings/mountain-river/", "t1", "gorge-sunlit-cascade",
+         "River Sounds for Tinnitus: Loud but Constant Mountain Water",
+         "Loud but constant river water", "0.62 dB loudness variation",
+         "A loud mountain river that barely changes in level: 0.62 dB variation over 20 minutes. A strong, even sound for masking louder tinnitus."),
+    ]),
+    "sleep": ("Nature Sounds for Sleep", [
+        ("/birdsong-for-sleep/", "s1", "ile-alatau-spruce-slope",
+         "Is Birdsong Good for Sleep? Why Steady Water May Work Better",
+         "Is birdsong good for sleep?", "42 loud events every minute",
+         "Birdsong sounds relaxing, but we measured 42 loud events a minute in a dawn chorus. Why it suits a short wind-down better than a whole night, and what to play instead."),
+        ("/recordings/mountain-river/", "s1", "big-almaty-cascade",
+         "River Sounds for Deep Sleep and Insomnia: Real Mountain River",
+         "River sounds for deep sleep", "Recorded in the Tian Shan, Kazakhstan",
+         "A real mountain river recorded near Almaty for sleep. Even, constant water with no AI audio, measured before it was published."),
+        ("/recordings/mountain-brook/", "s1", "big-almaty-clear-pebbles",
+         "Babbling Brook Sounds for Sleep: A Calm Mountain Stream",
+         "Babbling brook sounds for sleep", "A calm stream, measured",
+         "A calm babbling brook from the Tian Shan mountains for falling asleep. No sudden splashes: we measured zero peaks above 6 dB."),
+        ("/tian-shan-field-recordings/", "s1", "kapchagay-lake-waves",
+         "Gentle Lake Waves Sounds for Sleep: Kapchagay Shore, Kazakhstan",
+         "Gentle lake waves for sleep", "Kapchagay reservoir, Kazakhstan",
+         "Soft lake waves recorded on the Kapchagay shore in Kazakhstan, plus the mountain streams of the Tian Shan. Real field recordings for sleep and relaxation."),
+        ("/how-to-use-masking-sounds-at-night/", "s1", "clear-shallows-ripples",
+         "Sleep Sounds at Night: Speaker or Headphones, and How Loud",
+         "Sleep sounds: speaker or headphones?", "Volume, timer, every night",
+         "How to use a sleep sound at night: speaker or headphones, a comfortable volume and whether to use a timer. Simple tips based on Tinnitus UK and NHS guidance."),
+        ("/nature-sound-measurements/", "s1", "gorge-clear-pool-ripples",
+         "Calming Water Sounds for Sleep, Compared by Measurement",
+         "Calming water sounds, compared", "Which one stays steady all night?",
+         "Brook, river and birdsong compared by how steady they stay. Open measurement data from real nature recordings in Kazakhstan."),
+    ]),
+    "tian-shan": ("Tian Shan Nature & Field Recording", [
+        ("/tian-shan-field-recordings/", "n1", "big-almaty-gorge-autumn-stream",
+         "Big Almaty Gorge in Autumn, Almaty, Kazakhstan",
+         "Big Almaty gorge in autumn", "1,466 m, Tian Shan mountains",
+         "Autumn in the Big Almaty gorge at 1,466 m, where we record mountain water for sleep and tinnitus sounds. Field notes from the Tian Shan near Almaty."),
+        ("/how-we-record-water-sounds/", "n1", "kapchagay-zoom-h5-in-water",
+         "Field Recording Setup: How We Record Water Sounds with a Zoom H5",
+         "How we record water sounds", "Zoom H5, fur windscreen, long takes",
+         "Our field recording setup for water sounds: a Zoom H5 with a fur windscreen, placed a little back from the water, long takes on quiet weekdays."),
+        ("/tian-shan-field-recordings/", "n2", "kapchagay-red-rock-bay",
+         "Kapchagay Reservoir, Kazakhstan: Turquoise Water and Red Rocks",
+         "Kapchagay, Kazakhstan", "Turquoise water, red rocks",
+         "The Kapchagay reservoir near Konaev, Almaty Region: turquoise water, red rocks and quiet waves we record for sleep sounds."),
+        ("/how-we-record-water-sounds/", "n2", "mossy-spring-flex-tripod",
+         "Nature Sound Recording: A Zoom H5 at a Mossy Mountain Spring",
+         "Recording a mountain spring", "A flexible tripod, close to the water",
+         "Recording a tiny mossy spring in the Tian Shan with a Zoom H5 on a flexible tripod. How we place the recorder for clean water sounds."),
+        ("/tian-shan-field-recordings/", "n3", "ile-alatau-spruce-snow-peaks",
+         "Tian Shan Mountains Near Almaty: Spruce Forest and Snow Peaks",
+         "Tian Shan mountains near Almaty", "Ile Alatau, Kazakhstan",
+         "Spruce forest and snow peaks of the Ile Alatau, the Tian Shan range above Almaty, Kazakhstan, where our mountain stream recordings come from."),
+        ("/tian-shan-field-recordings/", "n4", "mossy-spring-drops-macro",
+         "A Hidden Mossy Spring in the Tian Shan Mountains",
+         "A hidden mossy spring", "Water from an old pipe in the moss",
+         "A secret spring in the Tian Shan: water running from an old pipe overgrown with moss. One of the places our nature sounds come from."),
+    ]),
+}
+
 
 def wrap(draw, text, font, width):
     lines, line = [], ""
@@ -103,6 +192,35 @@ def make_pin(slug, photo, title, sub):
     for ln in wrap(d, sub, body, W - 2 * pad)[:2]:
         d.text((pad, y + 18), ln, font=body, fill="#9aa7bd"); y += 46
     d.text((pad, H - 80), "nomadechosounds.com", font=label, fill="#e8ecf3")
+    out = ROOT / "assets" / "pins" / f"{slug}.jpg"
+    out.parent.mkdir(exist_ok=True)
+    img.save(out, quality=86, optimize=True, progressive=True)
+    return out
+
+
+def make_photo_pin(slug, photo, title, sub):
+    """1000x1500 full-bleed photo pin with a small caption over a dark fade.
+    Visual pins tend to get more saves than text panels on nature boards."""
+    from PIL import Image, ImageDraw, ImageFont, ImageOps
+    W, H = 1000, 1500
+    img = ImageOps.fit(Image.open(ROOT / "assets" / "img" / f"{photo}.jpg").convert("RGB"),
+                       (W, H), Image.LANCZOS, centering=(0.5, 0.45))
+    fade = Image.new("L", (1, H))
+    for y in range(H):
+        fade.putpixel((0, y), max(0, min(215, int((y - H * 0.62) / (H * 0.38) * 215))))
+    shade = Image.new("RGB", (W, H), "#0b111c")
+    img = Image.composite(shade, img, fade.resize((W, H)))
+    d = ImageDraw.Draw(img)
+    pad = 70
+    head = ImageFont.truetype(str(FONTS / "gloock-latin-400-normal.woff"), 64)
+    body = ImageFont.truetype(str(FONTS / "ibm-plex-sans-latin-400-normal.woff"), 34)
+    label = ImageFont.truetype(str(FONTS / "ibm-plex-sans-latin-600-normal.woff"), 28)
+    lines = wrap(d, title[:1].upper() + title[1:], head, W - 2 * pad)[:3]
+    y = H - 150 - 46 - len(lines) * 74
+    for ln in lines:
+        d.text((pad, y), ln, font=head, fill="#f2f4f8"); y += 74
+    d.text((pad, y + 10), sub, font=body, fill="#c9d2e0")
+    d.text((pad, H - 90), "nomadechosounds.com", font=label, fill="#f2f4f8")
     out = ROOT / "assets" / "pins" / f"{slug}.jpg"
     out.parent.mkdir(exist_ok=True)
     img.save(out, quality=86, optimize=True, progressive=True)
@@ -164,13 +282,49 @@ def main():
                 i["date"] = datetime.datetime.fromisoformat(release.isoformat() + "T09:00:00+05:00")
                 items.append(i)
     items.sort(key=lambda i: i["date"], reverse=True)
+    write_feed(ROOT / "feed.xml", f"{SITE}/feed.xml", "Nomad Echo Sounds", items)
+    print("feed items:", len(items))
+    build_boards(urls, today)
+
+
+def build_boards(urls, today):
+    """One feed per Pinterest board, 1 new pin per board per day."""
+    for board, (name, pins) in BOARDS.items():
+        items = []
+        for n, (path, tag, photo, ptitle, headline, sub, desc) in enumerate(pins):
+            release = BOARD_START + datetime.timedelta(days=n)
+            if release > today or SITE + path not in urls:
+                continue
+            slug = f"{board}-{path.strip('/').replace('/', '-')}-{tag}"
+            try:
+                maker = make_photo_pin if board in PHOTO_BOARDS else make_pin
+                pin = maker(slug, photo, headline, sub)
+                image = f"{SITE}/assets/pins/{slug}.jpg"
+            except Exception as exc:
+                print("pin image skipped:", exc)
+                pin = ROOT / "assets" / "img" / f"{photo}.jpg"
+                image = f"{SITE}/assets/img/{photo}.jpg"
+            items.append({
+                "title": ptitle, "desc": desc, "link": SITE + path,
+                "guid": f"{SITE}{path}#{board}-{tag}", "image": image,
+                "length": pin.stat().st_size,
+                "date": datetime.datetime.fromisoformat(release.isoformat() + "T09:00:00+05:00"),
+            })
+        items.sort(key=lambda i: i["date"], reverse=True)
+        out = ROOT / "feeds" / f"{board}.xml"
+        out.parent.mkdir(exist_ok=True)
+        write_feed(out, f"{SITE}/feeds/{board}.xml", f"Nomad Echo Sounds: {name}", items)
+        print(f"board {board}: {len(items)} of {len(pins)} pins released")
+
+
+def write_feed(path, self_url, title, items):
     esc = lambda t: html.escape(t, quote=False)
     out = ['<?xml version="1.0" encoding="UTF-8"?>',
            '<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">',
            "<channel>",
-           "<title>Nomad Echo Sounds</title>",
+           f"<title>{esc(title)}</title>",
            f"<link>{SITE}/</link>",
-           f'<atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml"/>',
+           f'<atom:link href="{self_url}" rel="self" type="application/rss+xml"/>',
            "<description>Real field recordings from the Tian Shan, Kazakhstan, measured for sleep and tinnitus masking. No AI audio.</description>",
            "<language>en</language>"]
     if items:
@@ -186,9 +340,7 @@ def main():
                 f'<media:content url="{i["image"]}" medium="image" type="image/jpeg" width="1000" height="1500"/>',
                 "</item>"]
     out += ["</channel>", "</rss>", ""]
-    (ROOT / "feed.xml").write_text("\n".join(out), encoding="utf-8")
-    print("feed items:", len(items))
-
+    path.write_text("\n".join(out), encoding="utf-8")
 
 if __name__ == "__main__":
     main()
