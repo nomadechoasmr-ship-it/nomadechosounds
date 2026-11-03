@@ -25,6 +25,7 @@ PINS = {
     "/tian-shan-field-recordings/": ("big-almaty-gorge-autumn-stream", "Big Almaty gorge, 1,466 m"),
     "/how-to-use-masking-sounds-at-night/": ("ile-alatau-mountain-stream", "Volume a little below the ringing"),
     "/how-we-record-water-sounds/": ("kapchagay-zoom-h5-in-water", "Zoom H5 standing in the water"),
+    "/best-natural-sounds-for-tinnitus/": ("big-almaty-stream-foam", "Brook 0.31 dB, river 0.62, birdsong 3.73"),
 }
 # Bump when a page's pin image changes: Pinterest only publishes items with a
 # new <guid>, so a new version makes it post the fresh pin (old pin stays).

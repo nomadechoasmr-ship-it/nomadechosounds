@@ -60,7 +60,7 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
     - Places: Big Almaty gorge at 1,466 m (autumn 2026), the Alma-Arasan gorge, the mossy pipe spring (macro setup), Kapchagay shore.
   - Photos to use (all in /assets/img, each has a .webp; width 1000 height 1500; use the .photo-pair layout from /tian-shan-field-recordings/ for pairs): kapchagay-zoom-h5-in-water, gorge-stream-setup-mossy-boulders, gorge-cliff-setup, mossy-spring-flex-tripod, mossy-pipe-setup, kapchagay-gravel-shore-setup, mossy-spring-macro-screen. Write honest alt text describing what is visible.
   - Link to /tian-shan-field-recordings/ for the full field notes. Add the Ko-fi note block as for every article.
-- [ ] 5. Best natural sounds for tinnitus (2026): ranked by our own measurements. Slug: /best-natural-sounds-for-tinnitus/
+- [x] 5. Best natural sounds for tinnitus (2026): ranked by our own measurements. Slug: /best-natural-sounds-for-tinnitus/
   - Rank only recordings that are on /nature-sound-measurements/ (brook first, river second, birdsong last with why). Link the data page. Short answer first.
   - Cite the same research as /tinnitus-masking-sounds/ (Henry et al. 2004; Wan Mohamad et al. 2018). No medical claims beyond them.
 - [ ] 6. Brook vs river vs birdsong for sleep: a measured comparison (2026). Slug: /brook-vs-river-vs-birdsong-sleep/
@@ -79,3 +79,4 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 - 2026-10-23: Mountain River recording notes — https://nomadechosounds.com/recordings/mountain-river/
 - 2026-10-27: How to use a masking sound at night — https://nomadechosounds.com/how-to-use-masking-sounds-at-night/
 - 2026-10-30: How we record water sounds: our field setup — https://nomadechosounds.com/how-we-record-water-sounds/
+- 2026-11-03: Best natural sounds for tinnitus (2026) — https://nomadechosounds.com/best-natural-sounds-for-tinnitus/
