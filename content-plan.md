@@ -63,7 +63,7 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 - [x] 5. Best natural sounds for tinnitus (2026): ranked by our own measurements. Slug: /best-natural-sounds-for-tinnitus/
   - Rank only recordings that are on /nature-sound-measurements/ (brook first, river second, birdsong last with why). Link the data page. Short answer first.
   - Cite the same research as /tinnitus-masking-sounds/ (Henry et al. 2004; Wan Mohamad et al. 2018). No medical claims beyond them.
-- [ ] 6. Brook vs river vs birdsong for sleep: a measured comparison (2026). Slug: /brook-vs-river-vs-birdsong-sleep/
+- [x] 6. Brook vs river vs birdsong for sleep: a measured comparison (2026). Slug: /brook-vs-river-vs-birdsong-sleep/
   - One comparison table from the data page, then which to choose when (headphones vs speaker, light vs heavy sleeper — keep this as practical listening advice, not medical advice).
 - [ ] 7. Why we never use a compressor on nature recordings. Slug: /no-compressor-nature-recordings/
   - A compressor lifts the background noise and recorder hiss of natural recordings and flattens natural dynamics; we use only trim, balance, a gentle high shelf and normalisation. Use the Mountain River level figures as the example.
@@ -80,3 +80,4 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 - 2026-10-27: How to use a masking sound at night — https://nomadechosounds.com/how-to-use-masking-sounds-at-night/
 - 2026-10-30: How we record water sounds: our field setup — https://nomadechosounds.com/how-we-record-water-sounds/
 - 2026-11-03: Best natural sounds for tinnitus (2026) — https://nomadechosounds.com/best-natural-sounds-for-tinnitus/
+- 2026-11-06: Brook vs river vs birdsong for sleep (2026) — https://nomadechosounds.com/brook-vs-river-vs-birdsong-sleep/
