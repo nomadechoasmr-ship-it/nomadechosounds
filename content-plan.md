@@ -65,14 +65,31 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
   - Cite the same research as /tinnitus-masking-sounds/ (Henry et al. 2004; Wan Mohamad et al. 2018). No medical claims beyond them.
 - [x] 6. Brook vs river vs birdsong for sleep: a measured comparison (2026). Slug: /brook-vs-river-vs-birdsong-sleep/
   - One comparison table from the data page, then which to choose when (headphones vs speaker, light vs heavy sleeper — keep this as practical listening advice, not medical advice).
-- [ ] 7. Why we never use a compressor on nature recordings. Slug: /no-compressor-nature-recordings/
-  - A compressor lifts the background noise and recorder hiss of natural recordings and flattens natural dynamics; we use only trim, balance, a gentle high shelf and normalisation. Use the Mountain River level figures as the example.
-- [ ] 8. Stereo balance and why 3.5 dB matters in headphones over a night. Slug: /stereo-balance-sleep-sounds/
-  - Use the Mountain Brook imbalance (L +3.5 dB, correlation 0.58) and the fix. Keep claims about perception general and sourced.
-- [ ] 9. How we make noise colours from real water (no generated noise). Slug: /how-we-make-noise-from-real-water/
+<!-- 2026-11-09 owner decision: topics 7–9 are now search-demand topics (what people actually type into Google).
+     The technical topics (compressor, stereo balance) moved down to 10–11; use them as sections inside articles where they fit. -->
+- [ ] 7. River sounds for sleep: real mountain river recordings. Slug: /river-sounds-for-sleep/ — PUBLISH TUESDAY 10 NOVEMBER 2026.
+  - Search intent: "river sounds for sleep", "river sounds for sleeping 8 hours", "mountain river sounds". Title (max 60 chars), e.g. "River Sounds for Sleep: Real Mountain River Recordings". No year in the title.
+  - Short answer first: a steady mountain river recorded in the Tian Shan near Almaty; our measured Mountain River varies only 0.62 dB in loudness and has almost no sudden peaks, which is why it works through the night. Link /recordings/mountain-river/ and /nature-sound-measurements/.
+  - Main "Listen" block: embed GM9wlcADK_s (Mountain River, the measured one) first. Then a short list of the owner's other river videos, taken ONLY from data/videos.json with their real IDs and titles (e.g. Gb03IkixcuA, N6E7g5kyC5Y, YP6E9KC6XvA, z0w31zFknDQ, RsbZOXU2-88). Describe each only by what its title says.
+  - Sections: why a river rather than a brook (more low-frequency body, use the centroid numbers from the data page), speaker vs headphones (link /how-to-use-masking-sounds-at-night/), "how loud" in general terms only.
+  - Use the Mountain River facts from topic 2 above only. Never invent numbers. Ko-fi block as usual.
+- [ ] 8. Natural white noise from real water (not generated). Slug: /natural-white-noise-real-water/
+  - Search intent: "natural white noise", "real white noise", "white noise vs nature sounds". Title e.g. "Natural White Noise Made from Real Water, Not Generated".
+  - Short answer first: every noise track on the channel (white, pink, brown, grey, green, blue) is made from the owner's own water recordings, never from a noise generator.
   - Facts: noise tracks are made only from the owner's recordings of streams and of water running through an abandoned steel pipe left from dam construction on a Tian Shan riverbank; shaped by equalising, filtering and taming peaks in an editor. Embed the pipe short V0CaA8UVzHE (vertical, use the .short wrapper). Do not invent EQ settings or frequencies; describe the method in general terms only.
-- [ ] 10. Water vs brown noise: a measured comparison. BLOCKED — needs the owner's brown-noise file and a raw brook file to measure.
-- [ ] 11. BLOCKED until the owner supplies measurements of the noise tracks: White vs pink vs brown noise vs water sounds for tinnitus (2026). Slug: /white-pink-brown-noise-vs-water-tinnitus/
+  - Listen block: noise videos from data/videos.json with real IDs (e.g. mBQ0TYeE-Ss white, ZguXT97jyl4 pink, t2lgwhHXszg brown, gfsGmFkmhUs grey, IhzxO9kS4vE green, gR9QGIEyCac blue). One line each, only from the title.
+  - A short section "why we never use a compressor": it lifts background noise and recorder hiss and flattens natural dynamics; we use only trim, balance, a gentle high shelf and normalisation (Mountain River example: peak -6.2 dBFS, RMS -30.3 dBFS, only +2.1 dB gain needed).
+- [ ] 9. Rain sounds for sleeping: real rain, no thunder or with thunder. Slug: /rain-sounds-for-sleeping/
+  - Search intent: "rain sounds for sleeping", "rain sounds black screen", "rain on window sounds". Title e.g. "Rain Sounds for Sleeping: Real Rain, Black Screen, No Ads".
+  - Short answer first: real rain recorded by the owner — black-screen rain from a window at home in Almaty, rain with video under a roof in the Tian Shan foothills (see "Locations confirmed by the owner"). No rain measurements exist yet: do NOT state any numbers about rain.
+  - Listen block grouped by what people look for, using only videos from data/videos.json with real IDs and their titles: steady rain no thunder (KJGQpNkAD4Q, 6uarWPUkNXg), rain with thunder (j4kJ0v3xFjg, IiV3rWl4H3U), short sessions (1ucsbJmA0e0, n8XxHcXzXY4), rain mixed with water (nXfx4Isi1BY, vKP4_jDg8aM).
+  - Practical advice: thunder vs no thunder for light sleepers, timer vs all night (general, link /how-to-use-masking-sounds-at-night/). Embed FOLE7sBIHL8 (recording rain in the mountains short, .short wrapper).
+- [ ] 10. Stereo balance and why 3.5 dB matters in headphones over a night. Slug: /stereo-balance-sleep-sounds/
+  - Use the Mountain Brook imbalance (L +3.5 dB, correlation 0.58) and the fix. Keep claims about perception general and sourced.
+- [ ] 11. Why we never use a compressor on nature recordings. Slug: /no-compressor-nature-recordings/ — SKIP if topic 8 already covers it well; then tick it as "merged into topic 8".
+  - A compressor lifts the background noise and recorder hiss of natural recordings and flattens natural dynamics; we use only trim, balance, a gentle high shelf and normalisation. Use the Mountain River level figures as the example.
+- [ ] 12. Water vs brown noise: a measured comparison. BLOCKED — needs the owner's brown-noise file and a raw brook file to measure.
+- [ ] 13. BLOCKED until the owner supplies measurements of the noise tracks: White vs pink vs brown noise vs water sounds for tinnitus (2026). Slug: /white-pink-brown-noise-vs-water-tinnitus/
 
 ## Done
 - 2026-10-20: Mountain Brook recording notes — https://nomadechosounds.com/recordings/mountain-brook/
