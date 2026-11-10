@@ -67,7 +67,7 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
   - One comparison table from the data page, then which to choose when (headphones vs speaker, light vs heavy sleeper — keep this as practical listening advice, not medical advice).
 <!-- 2026-11-09 owner decision: topics 7–9 are now search-demand topics (what people actually type into Google).
      The technical topics (compressor, stereo balance) moved down to 10–11; use them as sections inside articles where they fit. -->
-- [ ] 7. River sounds for sleep: real mountain river recordings. Slug: /river-sounds-for-sleep/ — PUBLISH TUESDAY 10 NOVEMBER 2026.
+- [x] 7. River sounds for sleep: real mountain river recordings. Slug: /river-sounds-for-sleep/ — PUBLISH TUESDAY 10 NOVEMBER 2026.
   - Search intent: "river sounds for sleep", "river sounds for sleeping 8 hours", "mountain river sounds". Title (max 60 chars), e.g. "River Sounds for Sleep: Real Mountain River Recordings". No year in the title.
   - Short answer first: a steady mountain river recorded in the Tian Shan near Almaty; our measured Mountain River varies only 0.62 dB in loudness and has almost no sudden peaks, which is why it works through the night. Link /recordings/mountain-river/ and /nature-sound-measurements/.
   - Main "Listen" block: embed GM9wlcADK_s (Mountain River, the measured one) first. Then a short list of the owner's other river videos, taken ONLY from data/videos.json with their real IDs and titles (e.g. Gb03IkixcuA, N6E7g5kyC5Y, YP6E9KC6XvA, z0w31zFknDQ, RsbZOXU2-88). Describe each only by what its title says.
@@ -98,3 +98,4 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 - 2026-10-30: How we record water sounds: our field setup — https://nomadechosounds.com/how-we-record-water-sounds/
 - 2026-11-03: Best natural sounds for tinnitus (2026) — https://nomadechosounds.com/best-natural-sounds-for-tinnitus/
 - 2026-11-06: Brook vs river vs birdsong for sleep (2026) — https://nomadechosounds.com/brook-vs-river-vs-birdsong-sleep/
+- 2026-11-10: River sounds for sleep — https://nomadechosounds.com/river-sounds-for-sleep/

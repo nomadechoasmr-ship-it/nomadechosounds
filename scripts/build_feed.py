@@ -27,6 +27,7 @@ PINS = {
     "/how-we-record-water-sounds/": ("kapchagay-zoom-h5-in-water", "Zoom H5 standing in the water"),
     "/best-natural-sounds-for-tinnitus/": ("big-almaty-stream-foam", "Brook 0.31 dB, river 0.62, birdsong 3.73"),
     "/brook-vs-river-vs-birdsong-sleep/": ("tian-shan-spruce-meadow-stream", "Brook, river or birdsong for sleep?"),
+    "/river-sounds-for-sleep/": ("big-almaty-cascade", "A real river, 0.62 dB loudness variation"),
 }
 # Bump when a page's pin image changes: Pinterest only publishes items with a
 # new <guid>, so a new version makes it post the fresh pin (old pin stays).
