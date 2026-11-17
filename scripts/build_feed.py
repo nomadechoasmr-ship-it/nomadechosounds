@@ -29,6 +29,7 @@ PINS = {
     "/brook-vs-river-vs-birdsong-sleep/": ("tian-shan-spruce-meadow-stream", "Brook, river or birdsong for sleep?"),
     "/river-sounds-for-sleep/": ("big-almaty-cascade", "A real river, 0.62 dB loudness variation"),
     "/natural-white-noise-real-water/": ("mossy-pipe-setup", "Noise made from real water, not generated"),
+    "/rain-sounds-for-sleeping/": ("ile-alatau-spruce-slope", "Real rain, recorded by Andrey"),
 }
 # Bump when a page's pin image changes: Pinterest only publishes items with a
 # new <guid>, so a new version makes it post the fresh pin (old pin stays).

@@ -79,7 +79,7 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
   - Facts: noise tracks are made only from the owner's recordings of streams and of water running through an abandoned steel pipe left from dam construction on a Tian Shan riverbank; shaped by equalising, filtering and taming peaks in an editor. Embed the pipe short V0CaA8UVzHE (vertical, use the .short wrapper). Do not invent EQ settings or frequencies; describe the method in general terms only.
   - Listen block: noise videos from data/videos.json with real IDs (e.g. mBQ0TYeE-Ss white, ZguXT97jyl4 pink, t2lgwhHXszg brown, gfsGmFkmhUs grey, IhzxO9kS4vE green, gR9QGIEyCac blue). One line each, only from the title.
   - A short section "why we never use a compressor": it lifts background noise and recorder hiss and flattens natural dynamics; we use only trim, balance, a gentle high shelf and normalisation (Mountain River example: peak -6.2 dBFS, RMS -30.3 dBFS, only +2.1 dB gain needed).
-- [ ] 9. Rain sounds for sleeping: real rain, no thunder or with thunder. Slug: /rain-sounds-for-sleeping/
+- [x] 9. Rain sounds for sleeping: real rain, no thunder or with thunder. Slug: /rain-sounds-for-sleeping/
   - Search intent: "rain sounds for sleeping", "rain sounds black screen", "rain on window sounds". Title e.g. "Rain Sounds for Sleeping: Real Rain, Black Screen, No Ads".
   - Short answer first: real rain recorded by the owner — black-screen rain from a window at home in Almaty, rain with video under a roof in the Tian Shan foothills (see "Locations confirmed by the owner"). No rain measurements exist yet: do NOT state any numbers about rain.
   - Listen block grouped by what people look for, using only videos from data/videos.json with real IDs and their titles: steady rain no thunder (KJGQpNkAD4Q, 6uarWPUkNXg), rain with thunder (j4kJ0v3xFjg, IiV3rWl4H3U), short sessions (1ucsbJmA0e0, n8XxHcXzXY4), rain mixed with water (nXfx4Isi1BY, vKP4_jDg8aM).
@@ -100,3 +100,4 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 - 2026-11-06: Brook vs river vs birdsong for sleep (2026) — https://nomadechosounds.com/brook-vs-river-vs-birdsong-sleep/
 - 2026-11-10: River sounds for sleep — https://nomadechosounds.com/river-sounds-for-sleep/
 - 2026-11-13: Natural white noise made from real water — https://nomadechosounds.com/natural-white-noise-real-water/
+- 2026-11-17: Rain sounds for sleeping — https://nomadechosounds.com/rain-sounds-for-sleeping/
