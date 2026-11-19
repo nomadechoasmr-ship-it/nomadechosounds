@@ -24,8 +24,8 @@
 <link rel="stylesheet" href="/assets/style.css?v=10">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"Article","headline":"How steady are nature sounds? Our measurement data","datePublished":"2026-10-26","dateModified":"2026-10-26","image":["https://nomadechosounds.com/assets/share/ile-alatau-valley-stream-16x9.jpg","https://nomadechosounds.com/assets/share/ile-alatau-valley-stream-4x3.jpg","https://nomadechosounds.com/assets/share/ile-alatau-valley-stream-1x1.jpg"],"author":{"@type":"Person","@id":"https://nomadechosounds.com/about/#andrey","name":"Andrey","url":"https://nomadechosounds.com/about/","sameAs":["https://www.youtube.com/@NomadEchoASMR"]},"publisher":{"@id":"https://nomadechosounds.com/#org"},"mainEntityOfPage":"https://nomadechosounds.com/nature-sound-measurements/","about":{"@id":"https://nomadechosounds.com/nature-sound-measurements/#dataset"}},
-{"@type":"Dataset","@id":"https://nomadechosounds.com/nature-sound-measurements/#dataset","name":"Nomad Echo nature sound steadiness measurements","description":"Measurements of real outdoor field recordings (a mountain brook and a mountain river in the Tian Shan near Almaty, Kazakhstan, and a dawn birdsong recording): loudness variation (standard deviation of level in 400 ms windows), P95–P5 spread, sudden peaks above 6 and 10 dB over the median level, spectral centroid range, level drift, energy below 40 Hz and left/right balance. Collected to choose recordings for sleep and tinnitus masking tracks.","url":"https://nomadechosounds.com/nature-sound-measurements/","keywords":["nature sounds","tinnitus masking","sleep sounds","field recording","loudness variation","sound measurement"],"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"creator":{"@id":"https://nomadechosounds.com/about/#andrey"},"publisher":{"@id":"https://nomadechosounds.com/#org"},"spatialCoverage":"Northern Tian Shan (Ile Alatau), Almaty Region, Kazakhstan","temporalCoverage":"2026","dateModified":"2026-10-26","variableMeasured":["Loudness variation (dB)","Spread P95–P5 (dB)","Sudden peaks over 6 dB","Sudden peaks over 10 dB","Spectral centroid (Hz)","Drift (dB RMS)","Energy below 40 Hz (%)","Left/right balance (dB)"],"distribution":{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://nomadechosounds.com/nature-sound-measurements/measurements.csv"}},
+{"@type":"Article","headline":"How steady are nature sounds? Our measurement data","datePublished":"2026-10-26","dateModified":"2026-11-19","image":["https://nomadechosounds.com/assets/share/ile-alatau-valley-stream-16x9.jpg","https://nomadechosounds.com/assets/share/ile-alatau-valley-stream-4x3.jpg","https://nomadechosounds.com/assets/share/ile-alatau-valley-stream-1x1.jpg"],"author":{"@type":"Person","@id":"https://nomadechosounds.com/about/#andrey","name":"Andrey","url":"https://nomadechosounds.com/about/","sameAs":["https://www.youtube.com/@NomadEchoASMR"]},"publisher":{"@id":"https://nomadechosounds.com/#org"},"mainEntityOfPage":"https://nomadechosounds.com/nature-sound-measurements/","about":{"@id":"https://nomadechosounds.com/nature-sound-measurements/#dataset"}},
+{"@type":"Dataset","@id":"https://nomadechosounds.com/nature-sound-measurements/#dataset","name":"Nomad Echo nature sound steadiness measurements","description":"Measurements of real outdoor field recordings (a mountain brook and a mountain river in the Tian Shan near Almaty, Kazakhstan, and a dawn birdsong recording): loudness variation (standard deviation of level in 400 ms windows), P95–P5 spread, sudden peaks above 6 and 10 dB over the median level, spectral centroid range, level drift, energy below 40 Hz and left/right balance. A raw rain-at-a-window take is reported separately, measured with ffmpeg in 10-second windows. Collected to choose recordings for sleep and tinnitus masking tracks.","url":"https://nomadechosounds.com/nature-sound-measurements/","keywords":["nature sounds","tinnitus masking","sleep sounds","field recording","loudness variation","sound measurement"],"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"creator":{"@id":"https://nomadechosounds.com/about/#andrey"},"publisher":{"@id":"https://nomadechosounds.com/#org"},"spatialCoverage":"Northern Tian Shan (Ile Alatau), Almaty Region, Kazakhstan","temporalCoverage":"2026","dateModified":"2026-11-19","variableMeasured":["Loudness variation (dB)","Spread P95–P5 (dB)","Sudden peaks over 6 dB","Sudden peaks over 10 dB","Spectral centroid (Hz)","Drift (dB RMS)","Energy below 40 Hz (%)","Left/right balance (dB)"],"distribution":{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://nomadechosounds.com/nature-sound-measurements/measurements.csv"}},
 {"@type":"Organization","@id":"https://nomadechosounds.com/#org","name":"Nomad Echo Sounds","url":"https://nomadechosounds.com/","logo":{"@type":"ImageObject","url":"https://nomadechosounds.com/assets/icon-512.png","width":512,"height":512},"sameAs":["https://www.youtube.com/@NomadEchoASMR","https://ko-fi.com/nomadecho"]}
 ]}
 </script>
@@ -46,7 +46,7 @@
     <div class="hero">
       <span class="label">Data · Measurements</span>
       <h1>How steady are nature sounds? Our measurement data</h1>
-      <p class="meta" style="color:var(--night-muted)">Updated 26 October 2026 · 5 min read</p>
+      <p class="meta" style="color:var(--night-muted)">Updated 19 November 2026 · 5 min read</p>
     </div>
   </div>
 </header>
@@ -76,6 +76,23 @@
     </div>
     <p class="caption">Lower is steadier for every row except balance, where closer to 0 dB is better. “—” means the measure was not reported for that recording. Both water recordings are from the Tian Shan near Almaty, 2026. Full notes: <a href="/recordings/mountain-brook/">Mountain Brook</a>, <a href="/recordings/mountain-river/">Mountain River</a>, <a href="/birdsong-for-sleep/">dawn birdsong</a>.</p>
 
+    <h2>Rain at a window (separate method)</h2>
+    <p>We also measured one raw take of steady night rain without thunder, recorded on a Zoom H5 on the windowsill of an open window in Almaty at about 4 AM (15-minute section of a 37:53 take, WAV 48 kHz / 24-bit). It was measured with ffmpeg in 10-second windows and broadcast loudness units, not with the 400 ms method above, so its numbers are kept out of the main table.</p>
+    <div class="tablebox">
+      <table>
+        <thead><tr><th>Measure</th><th>Window rain (raw)</th></tr></thead>
+        <tbody>
+          <tr><td>Integrated loudness</td><td class="num">−31.5 LUFS</td></tr>
+          <tr><td>Loudness range (LRA)</td><td class="num">2.6 LU</td></tr>
+          <tr><td>Level per 10 s window, 10–90 %</td><td class="num">spread 2.8 dB</td></tr>
+          <tr><td>Windows reaching 0 dBFS</td><td class="num">6 of 90 (heavy drops on the window ledge)</td></tr>
+          <tr><td>Strongest octave bands</td><td class="num">500 Hz–2 kHz</td></tr>
+          <tr><td>Stereo correlation</td><td class="num">+0.32</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">Full numbers and what they mean: <a href="/rain-sounds-for-sleeping/">rain sounds for sleeping</a>.</p>
+
     <h2>What each number means</h2>
     <ul>
       <li><b>Loudness variation</b> is the standard deviation of the level, measured in 400 ms windows. It answers one question: how much does the sound move from moment to moment? A third of a decibel is a tiny movement. Several decibels is a sound that keeps changing.</li>
@@ -99,7 +116,7 @@
     </ul>
 
     <h2>Coming next</h2>
-    <p>We plan to add lake waves from the Kapchagay shore, rain and a slow marsh stream to this table, measured the same way. The update date at the top of the page shows when the data last changed.</p>
+    <p>We plan to add lake waves from the Kapchagay shore and a slow marsh stream to this table, measured the same way, and to re-measure the rain with the 400 ms method. The update date at the top of the page shows when the data last changed.</p>
 
     <h2>Using this data</h2>
     <p>The measurement numbers on this page and in the CSV are free to reuse under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a> with a link back to this page. This covers the numbers only, not the recordings themselves. Suggested citation:</p>

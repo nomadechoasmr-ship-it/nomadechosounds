@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/assets/style.css?v=10">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Rain sounds for sleeping: real rain, black screen, no ads","datePublished":"2026-11-17","dateModified":"2026-11-17","author":{"@type":"Person","@id":"https://nomadechosounds.com/about/#andrey","name":"Andrey","url":"https://nomadechosounds.com/about/","sameAs":["https://www.youtube.com/@NomadEchoASMR"]},"publisher":{"@id":"https://nomadechosounds.com/#org"},"mainEntityOfPage":"https://nomadechosounds.com/rain-sounds-for-sleeping/","image":["https://nomadechosounds.com/assets/share/ile-alatau-spruce-slope-16x9.jpg","https://nomadechosounds.com/assets/share/ile-alatau-spruce-slope-4x3.jpg","https://nomadechosounds.com/assets/share/ile-alatau-spruce-slope-1x1.jpg"]},{"@type":"Organization","@id":"https://nomadechosounds.com/#org","name":"Nomad Echo Sounds","url":"https://nomadechosounds.com/","logo":{"@type":"ImageObject","url":"https://nomadechosounds.com/assets/icon-512.png","width":512,"height":512},"sameAs":["https://www.youtube.com/@NomadEchoASMR","https://ko-fi.com/nomadecho"]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Rain sounds for sleeping: real rain, black screen, no ads","datePublished":"2026-11-17","dateModified":"2026-11-19","author":{"@type":"Person","@id":"https://nomadechosounds.com/about/#andrey","name":"Andrey","url":"https://nomadechosounds.com/about/","sameAs":["https://www.youtube.com/@NomadEchoASMR"]},"publisher":{"@id":"https://nomadechosounds.com/#org"},"mainEntityOfPage":"https://nomadechosounds.com/rain-sounds-for-sleeping/","image":["https://nomadechosounds.com/assets/share/ile-alatau-spruce-slope-16x9.jpg","https://nomadechosounds.com/assets/share/ile-alatau-spruce-slope-4x3.jpg","https://nomadechosounds.com/assets/share/ile-alatau-spruce-slope-1x1.jpg"]},{"@type":"Organization","@id":"https://nomadechosounds.com/#org","name":"Nomad Echo Sounds","url":"https://nomadechosounds.com/","logo":{"@type":"ImageObject","url":"https://nomadechosounds.com/assets/icon-512.png","width":512,"height":512},"sameAs":["https://www.youtube.com/@NomadEchoASMR","https://ko-fi.com/nomadecho"]}]}
 </script>
 </head>
 <body>
@@ -42,7 +42,7 @@
     <div class="hero">
       <span class="label">Guide · Rain sounds</span>
       <h1>Rain sounds for sleeping: real rain, black screen, no ads</h1>
-      <p class="meta" style="color:var(--night-muted)">November 2026 · 4 min read</p>
+      <p class="meta" style="color:var(--night-muted)">November 2026 · 6 min read</p>
     </div>
   </div>
 </header>
@@ -91,12 +91,35 @@
     <h2>Where our rain is recorded</h2>
     <p>There are two places, and you can hear the difference:</p>
     <ul>
-      <li><b>A window at home in Almaty.</b> The black-screen rain tracks are recorded from a window in the city, at night. That is where the "rain on window" and "rain on pavement at 4 AM" sounds come from.</li>
+      <li><b>A window at home in Almaty.</b> The black-screen rain tracks are recorded at an open window in the city, at night, with the recorder on the windowsill. That is where the "rain on window" and "rain on pavement at 4 AM" sounds come from.</li>
       <li><b>Under a roof in the Tian Shan foothills.</b> The rain tracks with video are recorded in the mountains above Almaty, with the recorder sheltered under a roof so it stays dry and the rain lands around it.</li>
     </ul>
     <div class="short"><iframe src="https://www.youtube-nocookie.com/embed/FOLE7sBIHL8" title="Recording rain in the mountains, Nomad Echo" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     <p class="caption">Backstage: recording rain in the mountains.</p>
     <p>The recorder is the same Zoom H5 with a fur windscreen that we use for water. Our full field setup is in <a href="/how-we-record-water-sounds/">how we record water sounds</a>. Like all our audio, the rain is real: nothing is generated, and the noise-colour versions are shaped from real recordings, as explained in <a href="/natural-white-noise-real-water/">natural white noise from real water</a>.</p>
+
+    <h2>What we measured in our window rain</h2>
+    <p>We measured one raw take of steady night rain, with no thunder and no processing: a Zoom H5 on the windowsill of an open window at home in Almaty, at about 4 AM, recorded as WAV 48 kHz / 24-bit. We analysed a 15-minute section (19:20–34:20) of a 37:53 take with ffmpeg.</p>
+    <div class="tablebox">
+      <table>
+        <thead><tr><th>Measure</th><th>Window rain (raw)</th></tr></thead>
+        <tbody>
+          <tr><td>Integrated loudness</td><td class="num">−31.5 LUFS</td></tr>
+          <tr><td>Loudness range (LRA)</td><td class="num">2.6 LU</td></tr>
+          <tr><td>Level per 10 s window, 10–90 %</td><td class="num">−36.4 to −33.6 dBFS (spread 2.8 dB)</td></tr>
+          <tr><td>RMS, whole section</td><td class="num">−35.1 dBFS</td></tr>
+          <tr><td>Median peak per 10 s</td><td class="num">−12.9 dBFS</td></tr>
+          <tr><td>Windows reaching full scale (0 dBFS)</td><td class="num">6 of 90</td></tr>
+          <tr><td>Strongest octave bands</td><td class="num">500 Hz–2 kHz (−43.0 to −43.8 dBFS)</td></tr>
+          <tr><td>Stereo correlation</td><td class="num">+0.32</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><b>The rain itself is steady.</b> Over 15 minutes, nine in ten of the 10-second windows stayed within a 2.8 dB band, and the loudness range was 2.6 LU. There is no slow build-up or fade.</p>
+    <p><b>The sound is a midrange hush, not a hiss.</b> The energy peaks between 500 Hz and 2 kHz. Above 2 kHz it falls by about 3 dB per octave, and from 8 to 16 kHz by another 6.5 dB. From 63 Hz up to 1 kHz it rises by about 1.5 dB per octave. That is a broad hump in the middle, so it is neither white nor pink noise. It is the reason this rain sounds softer than a bright white noise.</p>
+    <p><b>The weak point is single heavy drops.</b> In 6 of the 90 ten-second windows, a heavy drop hitting the window ledge reached full scale, while a typical 10-second window peaked around −12.9 dBFS. These are short, low knocks (63–250 Hz) on top of the rain. They are the same kind of sudden event we count in our water measurements, and they are what a light sleeper is most likely to notice.</p>
+    <p><b>The stereo image is wide.</b> A left/right correlation of +0.32 means the two channels share little, so in headphones the rain spreads around you instead of sitting in the middle.</p>
+    <p>These numbers come from a different method than our <a href="/nature-sound-measurements/">water measurements</a> (10-second windows and broadcast loudness units instead of 400 ms windows), so they cannot be set side by side with the brook's 0.31 dB. They describe the raw take, before any editing for a video.</p>
 
     <h2>Thunder or no thunder?</h2>
     <p>Steady rain is a fairly even wash of sound. Thunder adds something different: rolls that rise out of the rain and fade again. Some people find that rumble cosy; for others, every roll pulls attention back to the sound.</p>
@@ -105,7 +128,7 @@
       <li><b>If you like a storm atmosphere</b> and sleep through it, rain with distant thunder is the softer choice; heavy rain with thunder is the most dramatic.</li>
       <li><b>If you use sound because of tinnitus</b>, Tinnitus UK suggests that most people do best with a sound that "doesn't demand too much attention and is pleasant to listen to" [1]. A steady rain without thunder fits that description better than a storm.</li>
     </ul>
-    <p>We have not measured our rain recordings yet, so we do not publish numbers for them. Our measured water recordings, and why steadiness matters at night, are on the <a href="/nature-sound-measurements/">measurement data</a> page.</p>
+    <p>Our measured window rain above shows why this matters even without thunder: the rain is steady, and the only sudden sounds are a few heavy drops on the ledge. Why steadiness matters at night is explained on the <a href="/nature-sound-measurements/">measurement data</a> page.</p>
 
     <h2>Timer or all night?</h2>
     <p>Both work; it depends on why you play the sound. Tinnitus UK notes that bedside sound devices often have a timer "to switch off once you are asleep", and that sound left on at a low volume can be a soothing distraction from tinnitus if you wake in the early hours [1]. The NHS advises people with tinnitus not to sit in total silence, and lists soft music or sounds as a way to be distracted from it [2].</p>
@@ -113,7 +136,7 @@
 
     <h2>Limits</h2>
     <ul>
-      <li>Our rain recordings have not been measured for steadiness or sudden peaks yet. This page contains no rain measurements on purpose.</li>
+      <li>We have measured one raw window-rain take, with a different method than our water recordings. The rain with thunder and the mountain rain have not been measured.</li>
       <li>Thunder vs no thunder is listening advice, not a medical recommendation.</li>
       <li>If you prefer flowing water to rain, see <a href="/river-sounds-for-sleep/">river sounds for sleep</a> or our measured <a href="/brook-vs-river-vs-birdsong-sleep/">brook vs river comparison</a>.</li>
     </ul>

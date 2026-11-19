@@ -8,7 +8,8 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 - Mountain streams and rivers: Tian Shan mountains near Almaty.
 - Lake waves and shore sounds: Kapchagay reservoir shore.
 - Soft Marsh Water (video JYSK0zeIStk): a small stream in marshland near the Kapchagay reservoir.
-- Rain with video (under a roof): Tian Shan foothills. Black-screen rain: recorded from a window at home in the city.
+- Rain with video (under a roof): Tian Shan foothills. Black-screen rain: recorded at an open window at home in the city (Almaty), Zoom H5 on the windowsill, around 4 AM.
+- Rain measurement (owner, ffmpeg, 2026-11-19), raw take, no thunder, no processing: 15:00 section (19:20–34:20 of a 37:53 take), 48 kHz / 24-bit stereo. Integrated -31.5 LUFS; LRA 2.6 LU (10–95th pct -32.5…-29.8 LUFS); RMS -35.1 dBFS; RMS per 10 s window median -35.8, 10–90 % -36.4…-33.6 dBFS (spread 2.8 dB); sample peak 0.0 dBFS in 6 of 90 ten-second windows (single heavy drops hitting the window ledge, 63–250 Hz), median peak per 10 s -12.9 dBFS; stereo correlation +0.32. Octave bands (dBFS): 31.5 Hz -52.2, 63 -49.0, 125 -46.4, 250 -46.7, 500 -43.2, 1k -43.0, 2k -43.8, 4k -47.0, 8k -49.7, 16k -56.2. Peak 500 Hz–2 kHz; +1.5 dB/oct 63 Hz→1 kHz; -3 dB/oct 2→8 kHz; -6.5 dB 8→16 kHz. Not white or pink. Different method from the 400 ms water measurements: do not compare directly. Published on /rain-sounds-for-sleeping/ and /nature-sound-measurements/ on 2026-11-19.
 
 - Noise tracks (white, pink, brown, grey, blue): never generated. Made from the owner's own recordings (streams; water from an old steel pipe left from Soviet-era construction (owner mentions a dam) on a Tian Shan riverbank, now sunk into the slope and overgrown with moss, feeding its own tiny stream) by equalising, filtering and taming peaks in an editor. Owner's firm principle: no generated noise.
 
