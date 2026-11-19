@@ -19,8 +19,13 @@ Python на этом ПК не открывает пути с кириллице
   Энергия < 40 Гц, % = доля энергии ниже 40 Гц в спектре моно-суммы (L+R)/2,
                      окно Ханна на каждом 400-мс окне, постоянная составляющая
                      (0 Гц) не учитывается
-Не добавлены "тон-центр" и "дрейф": у них на сайте не записано точное
-определение (длина окна, способ), а новая формула дала бы несравнимые числа.
+Добавлено 2026-11-19, НОВЫЕ определения (старые для ручья/реки нигде не записаны,
+поэтому старые цифры тон-центра и дрейфа надо пересчитать этим же скриптом):
+  Тон-центр, Гц    = спектральный центроид моно-суммы по кускам 10 с
+                     (25 окон по 400 мс, без 0 Гц); печатаем медиану,
+                     P5–P95 и мин–макс по кускам
+  Дрейф, дБ        = уровень (RMS) каждой полной минуты отрезка;
+                     печатаем std минутных уровней и разницу макс−мин
 """
 import argparse, sys
 import numpy as np
@@ -45,7 +50,7 @@ freqs = np.fft.rfftfreq(n, 1 / sr)
 low = (freqs > 0) & (freqs < 40)
 band = freqs > 0
 
-rms, pk = [], []
+rms, pk, pw, fpw = [], [], [], []
 sxx = syy = sxy = sx = sy = 0.0
 cnt = 0
 e_low = e_all = 0.0
@@ -56,10 +61,12 @@ for blk in sf.blocks(a.wav, blocksize=n * 100, start=start, stop=stop,
         continue
     w = blk[:full].reshape(-1, n, ch)
     p = np.mean(w ** 2, axis=(1, 2))
+    pw.extend(p)
     rms.extend(10 * np.log10(np.maximum(p, 1e-20)))
     pk.extend(20 * np.log10(np.maximum(np.max(np.abs(w), axis=(1, 2)), 1e-10)))
     spec = np.abs(np.fft.rfft(w.mean(axis=2) * hann, axis=1)) ** 2
     e_low += spec[:, low].sum(); e_all += spec[:, band].sum()
+    fpw.extend(zip((spec[:, band] * freqs[band]).sum(axis=1), spec[:, band].sum(axis=1)))
     if ch >= 2:
         L, R = blk[:full, 0], blk[:full, 1]
         sx += L.sum(); sy += R.sum(); sxx += (L * L).sum(); syy += (R * R).sum()
@@ -85,6 +92,18 @@ print(f"RMS окна > медиана+6 дБ: {share(int((rms > med + 6).sum()))
 print(f"Пик окон: медиана {pmed:.2f} дБFS, макс {pk.max():.2f}")
 print(f"Пик окна > медиана пиков+6 дБ: {share(int((pk > pmed + 6).sum()))}, "
       f"> +10 дБ: {share(int((pk > pmed + 10).sum()))}")
+per10 = int(round(10 / a.win)); per60 = int(round(60 / a.win))
+fp = np.array(fpw); m = len(fp) // per10
+if m:
+    c = fp[:m * per10].reshape(m, per10, 2).sum(axis=1)
+    cen = c[:, 0] / np.maximum(c[:, 1], 1e-30)
+    q5, q95 = np.percentile(cen, [5, 95])
+    print(f"Тон-центр (куски 10 с, {m} шт.): медиана {np.median(cen):.0f} Гц, "
+          f"P5–P95 {q5:.0f}–{q95:.0f}, мин–макс {cen.min():.0f}–{cen.max():.0f} Гц")
+pwa = np.array(pw); mm = len(pwa) // per60
+if mm >= 2:
+    lv = 10 * np.log10(np.maximum(pwa[:mm * per60].reshape(mm, per60).mean(axis=1), 1e-20))
+    print(f"Дрейф (полных минут {mm}): std {np.std(lv):.2f} дБ, макс−мин {lv.max() - lv.min():.2f} дБ")
 if e_all > 0:
     print(f"Энергия ниже 40 Гц: {100 * e_low / e_all:.3f} %")
 if cnt:
