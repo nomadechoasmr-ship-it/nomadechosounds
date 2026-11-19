@@ -25,7 +25,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Article","headline":"How steady are nature sounds? Our measurement data","datePublished":"2026-10-26","dateModified":"2026-11-19","image":["https://nomadechosounds.com/assets/share/ile-alatau-valley-stream-16x9.jpg","https://nomadechosounds.com/assets/share/ile-alatau-valley-stream-4x3.jpg","https://nomadechosounds.com/assets/share/ile-alatau-valley-stream-1x1.jpg"],"author":{"@type":"Person","@id":"https://nomadechosounds.com/about/#andrey","name":"Andrey","url":"https://nomadechosounds.com/about/","sameAs":["https://www.youtube.com/@NomadEchoASMR"]},"publisher":{"@id":"https://nomadechosounds.com/#org"},"mainEntityOfPage":"https://nomadechosounds.com/nature-sound-measurements/","about":{"@id":"https://nomadechosounds.com/nature-sound-measurements/#dataset"}},
-{"@type":"Dataset","@id":"https://nomadechosounds.com/nature-sound-measurements/#dataset","name":"Nomad Echo nature sound steadiness measurements","description":"Measurements of real outdoor field recordings (a mountain brook and a mountain river in the Tian Shan near Almaty, Kazakhstan, and a dawn birdsong recording): loudness variation (standard deviation of level in 400 ms windows), P95–P5 spread, sudden peaks above 6 and 10 dB over the median level, spectral centroid range, level drift, energy below 40 Hz and left/right balance. A raw rain-at-a-window take is reported separately, measured with ffmpeg in 10-second windows. Collected to choose recordings for sleep and tinnitus masking tracks.","url":"https://nomadechosounds.com/nature-sound-measurements/","keywords":["nature sounds","tinnitus masking","sleep sounds","field recording","loudness variation","sound measurement"],"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"creator":{"@id":"https://nomadechosounds.com/about/#andrey"},"publisher":{"@id":"https://nomadechosounds.com/#org"},"spatialCoverage":"Northern Tian Shan (Ile Alatau), Almaty Region, Kazakhstan","temporalCoverage":"2026","dateModified":"2026-11-19","variableMeasured":["Loudness variation (dB)","Spread P95–P5 (dB)","Sudden peaks over 6 dB","Sudden peaks over 10 dB","Spectral centroid (Hz)","Drift (dB RMS)","Energy below 40 Hz (%)","Left/right balance (dB)"],"distribution":{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://nomadechosounds.com/nature-sound-measurements/measurements.csv"}},
+{"@type":"Dataset","@id":"https://nomadechosounds.com/nature-sound-measurements/#dataset","name":"Nomad Echo nature sound steadiness measurements","description":"Measurements of real outdoor field recordings (a mountain brook and a mountain river in the Tian Shan near Almaty, Kazakhstan, and a dawn birdsong recording): loudness variation (standard deviation of level in 400 ms windows), P95–P5 spread, sudden peaks above 6 and 10 dB over the median level, spectral centroid range, level drift, energy below 40 Hz and left/right balance. Also a raw take of night rain at an open window in Almaty (loudness variation, spread and sudden peaks). Collected to choose recordings for sleep and tinnitus masking tracks.","url":"https://nomadechosounds.com/nature-sound-measurements/","keywords":["nature sounds","tinnitus masking","sleep sounds","field recording","loudness variation","sound measurement"],"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"creator":{"@id":"https://nomadechosounds.com/about/#andrey"},"publisher":{"@id":"https://nomadechosounds.com/#org"},"spatialCoverage":"Northern Tian Shan (Ile Alatau), Almaty Region, Kazakhstan","temporalCoverage":"2026","dateModified":"2026-11-19","variableMeasured":["Loudness variation (dB)","Spread P95–P5 (dB)","Sudden peaks over 6 dB","Sudden peaks over 10 dB","Spectral centroid (Hz)","Drift (dB RMS)","Energy below 40 Hz (%)","Left/right balance (dB)"],"distribution":{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://nomadechosounds.com/nature-sound-measurements/measurements.csv"}},
 {"@type":"Organization","@id":"https://nomadechosounds.com/#org","name":"Nomad Echo Sounds","url":"https://nomadechosounds.com/","logo":{"@type":"ImageObject","url":"https://nomadechosounds.com/assets/icon-512.png","width":512,"height":512},"sameAs":["https://www.youtube.com/@NomadEchoASMR","https://ko-fi.com/nomadecho"]}
 ]}
 </script>
@@ -59,39 +59,22 @@
     <h2>All measurements</h2>
     <div class="tablebox">
       <table>
-        <thead><tr><th>Measure</th><th>Mountain Brook</th><th>Mountain River</th><th>Dawn birdsong</th></tr></thead>
+        <thead><tr><th>Measure</th><th>Mountain Brook</th><th>Mountain River</th><th>Window rain</th><th>Dawn birdsong</th></tr></thead>
         <tbody>
-          <tr><td>Loudness variation</td><td class="num">0.31 dB</td><td class="num">0.62 dB</td><td class="num">3.73 dB</td></tr>
-          <tr><td>Spread (P95–P5)</td><td class="num">1.04 dB</td><td class="num">2.04 dB</td><td class="num">12.83 dB</td></tr>
-          <tr><td>Sudden peaks &gt;6 dB</td><td class="num">none</td><td class="num">0.031%</td><td class="num">42 per min</td></tr>
-          <tr><td>Sudden peaks &gt;10 dB</td><td class="num">none</td><td class="num">0.000%</td><td class="num">—</td></tr>
-          <tr><td>Tone centre</td><td class="num">1115–1136 Hz</td><td class="num">1142–1182 Hz</td><td class="num">2217–4238 Hz</td></tr>
-          <tr><td>Drift</td><td class="num">0.2 dB RMS</td><td class="num">0.6 dB RMS</td><td class="num">—</td></tr>
-          <tr><td>Energy below 40 Hz</td><td class="num">0.059%</td><td class="num">0.04%</td><td class="num">—</td></tr>
-          <tr><td>Left / right balance</td><td class="num">L +3.5 dB</td><td class="num">−0.46 dB</td><td class="num">—</td></tr>
-          <tr><td>Analysed</td><td class="num">85 s excerpt</td><td class="num">20 min</td><td class="num">2 min</td></tr>
-          <tr><td>Verdict</td><td><span class="pill ok">Used</span></td><td><span class="pill ok">Used</span></td><td><span class="pill no">Rejected</span></td></tr>
+          <tr><td>Loudness variation</td><td class="num">0.31 dB</td><td class="num">0.62 dB</td><td class="num">1.51 dB</td><td class="num">3.73 dB</td></tr>
+          <tr><td>Spread (P95–P5)</td><td class="num">1.04 dB</td><td class="num">2.04 dB</td><td class="num">3.33 dB</td><td class="num">12.83 dB</td></tr>
+          <tr><td>Sudden peaks &gt;6 dB</td><td class="num">none</td><td class="num">0.031%</td><td class="num">1.6%</td><td class="num">42 per min</td></tr>
+          <tr><td>Sudden peaks &gt;10 dB</td><td class="num">none</td><td class="num">0.000%</td><td class="num">0.6%</td><td class="num">—</td></tr>
+          <tr><td>Tone centre</td><td class="num">1115–1136 Hz</td><td class="num">1142–1182 Hz</td><td class="num">—</td><td class="num">2217–4238 Hz</td></tr>
+          <tr><td>Drift</td><td class="num">0.2 dB RMS</td><td class="num">0.6 dB RMS</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>Energy below 40 Hz</td><td class="num">0.059%</td><td class="num">0.04%</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>Left / right balance</td><td class="num">L +3.5 dB</td><td class="num">−0.46 dB</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>Analysed</td><td class="num">85 s excerpt</td><td class="num">20 min</td><td class="num">15 min</td><td class="num">2 min</td></tr>
+          <tr><td>Verdict</td><td><span class="pill ok">Used</span></td><td><span class="pill ok">Used</span></td><td><span class="pill ok">Used, peaks limited</span></td><td><span class="pill no">Rejected</span></td></tr>
         </tbody>
       </table>
     </div>
-    <p class="caption">Lower is steadier for every row except balance, where closer to 0 dB is better. “—” means the measure was not reported for that recording. Both water recordings are from the Tian Shan near Almaty, 2026. Full notes: <a href="/recordings/mountain-brook/">Mountain Brook</a>, <a href="/recordings/mountain-river/">Mountain River</a>, <a href="/birdsong-for-sleep/">dawn birdsong</a>.</p>
-
-    <h2>Rain at a window (separate method)</h2>
-    <p>We also measured one raw take of steady night rain without thunder, recorded on a Zoom H5 on the windowsill of an open window in Almaty at about 4 AM (15-minute section of a 37:53 take, WAV 48 kHz / 24-bit). It was measured with ffmpeg in 10-second windows and broadcast loudness units, not with the 400 ms method above, so its numbers are kept out of the main table.</p>
-    <div class="tablebox">
-      <table>
-        <thead><tr><th>Measure</th><th>Window rain (raw)</th></tr></thead>
-        <tbody>
-          <tr><td>Integrated loudness</td><td class="num">−31.5 LUFS</td></tr>
-          <tr><td>Loudness range (LRA)</td><td class="num">2.6 LU</td></tr>
-          <tr><td>Level per 10 s window, 10–90 %</td><td class="num">spread 2.8 dB</td></tr>
-          <tr><td>Windows reaching 0 dBFS</td><td class="num">6 of 90 (heavy drops on the window ledge)</td></tr>
-          <tr><td>Strongest octave bands</td><td class="num">500 Hz–2 kHz</td></tr>
-          <tr><td>Stereo correlation</td><td class="num">+0.32</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="caption">Full numbers and what they mean: <a href="/rain-sounds-for-sleeping/">rain sounds for sleeping</a>.</p>
+    <p class="caption">Lower is steadier for every row except balance, where closer to 0 dB is better. “—” means the measure was not reported for that recording. Both water recordings are from the Tian Shan near Almaty, 2026. The window rain is a raw take at an open window in Almaty at about 4 AM, both channels pooled; its loud windows are single heavy drops on the window ledge. Full notes: <a href="/recordings/mountain-brook/">Mountain Brook</a>, <a href="/recordings/mountain-river/">Mountain River</a>, <a href="/rain-sounds-for-sleeping/">window rain</a>, <a href="/birdsong-for-sleep/">dawn birdsong</a>.</p>
 
     <h2>What each number means</h2>
     <ul>
@@ -111,12 +94,12 @@
     <h2>Limits of this data</h2>
     <ul>
       <li>Each sound is one recording at one place and time. Another brook, or the same brook in a different month, will measure differently.</li>
-      <li>The analysed sections differ in length: 85 seconds for the brook, 20 minutes for the river, 2 minutes for the birdsong. Longer sections are more representative.</li>
+      <li>The analysed sections differ in length: 85 seconds for the brook, 20 minutes for the river, 15 minutes for the rain, 2 minutes for the birdsong. Longer sections are more representative.</li>
       <li>These are acoustic measurements, not a clinical test. They show which sounds are steady, not how any one person's tinnitus will respond. The research behind steady sounds for masking is summarised in our <a href="/tinnitus-masking-sounds/">tinnitus masking guide</a>.</li>
     </ul>
 
     <h2>Coming next</h2>
-    <p>We plan to add lake waves from the Kapchagay shore and a slow marsh stream to this table, measured the same way, and to re-measure the rain with the 400 ms method. The update date at the top of the page shows when the data last changed.</p>
+    <p>We plan to add lake waves from the Kapchagay shore and a slow marsh stream to this table, measured the same way. The update date at the top of the page shows when the data last changed.</p>
 
     <h2>Using this data</h2>
     <p>The measurement numbers on this page and in the CSV are free to reuse under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a> with a link back to this page. This covers the numbers only, not the recordings themselves. Suggested citation:</p>
