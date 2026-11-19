@@ -1,0 +1,95 @@
+"""Замер ровности звука окнами 400 мс (схема для статей сайта).
+
+python -I tools/measure_400ms.py ФАЙЛ.wav [--win 0.4] [--skip 0] [--dur 0]
+
+Python на этом ПК не открывает пути с кириллицей: сначала cp файла в Temp.
+
+Что считает (окна без перекрытия, по умолчанию 400 мс):
+  RMS окна, дБFS   = 10*log10(среднее(L^2, R^2) по окну) — оба канала вместе
+  std              = стандартное отклонение RMS окон, дБ
+  P95-P5           = размах RMS окон между 5-м и 95-м перцентилем, дБ
+  RMS > медиана+6/+10 = сколько окон громче медианы на 6 и 10 дБ
+  Пик окна         = max |x| по окну (оба канала), дБFS
+  Пик > медиана пиков +6/+10 = короткие удары: капля, щелчок, всплеск
+  Корреляция L/R   = Пирсон по всему файлу (не aphasemeter)
+
+Добавлено 2026-11-19 (две колонки таблицы сайта, у которых однозначное определение):
+  Баланс L/R, дБ   = 20*log10(RMS левого / RMS правого) по всему отрезку;
+                     плюс = левый громче (как "L +3.5 dB" у Mountain Brook)
+  Энергия < 40 Гц, % = доля энергии ниже 40 Гц в спектре моно-суммы (L+R)/2,
+                     окно Ханна на каждом 400-мс окне, постоянная составляющая
+                     (0 Гц) не учитывается
+Не добавлены "тон-центр" и "дрейф": у них на сайте не записано точное
+определение (длина окна, способ), а новая формула дала бы несравнимые числа.
+"""
+import argparse, sys
+import numpy as np
+import soundfile as sf
+
+sys.stdout.reconfigure(encoding="utf-8")
+ap = argparse.ArgumentParser()
+ap.add_argument("wav")
+ap.add_argument("--win", type=float, default=0.4)
+ap.add_argument("--skip", type=float, default=0.0, help="пропустить секунд с начала")
+ap.add_argument("--dur", type=float, default=0.0, help="взять секунд (0 = до конца)")
+a = ap.parse_args()
+
+info = sf.info(a.wav)
+sr, ch = info.samplerate, info.channels
+n = int(round(a.win * sr))
+start = int(a.skip * sr)
+stop = info.frames if a.dur <= 0 else min(info.frames, start + int(a.dur * sr))
+
+hann = np.hanning(n)
+freqs = np.fft.rfftfreq(n, 1 / sr)
+low = (freqs > 0) & (freqs < 40)
+band = freqs > 0
+
+rms, pk = [], []
+sxx = syy = sxy = sx = sy = 0.0
+cnt = 0
+e_low = e_all = 0.0
+for blk in sf.blocks(a.wav, blocksize=n * 100, start=start, stop=stop,
+                     dtype="float64", always_2d=True):
+    full = (len(blk) // n) * n          # хвост короче окна отбрасываем
+    if full == 0:
+        continue
+    w = blk[:full].reshape(-1, n, ch)
+    p = np.mean(w ** 2, axis=(1, 2))
+    rms.extend(10 * np.log10(np.maximum(p, 1e-20)))
+    pk.extend(20 * np.log10(np.maximum(np.max(np.abs(w), axis=(1, 2)), 1e-10)))
+    spec = np.abs(np.fft.rfft(w.mean(axis=2) * hann, axis=1)) ** 2
+    e_low += spec[:, low].sum(); e_all += spec[:, band].sum()
+    if ch >= 2:
+        L, R = blk[:full, 0], blk[:full, 1]
+        sx += L.sum(); sy += R.sum(); sxx += (L * L).sum(); syy += (R * R).sum()
+        sxy += (L * R).sum(); cnt += len(L)
+
+if not rms:
+    sys.exit("Отрезок короче одного окна — нечего мерить.")
+rms, pk = np.array(rms), np.array(pk)
+med, pmed = np.median(rms), np.median(pk)
+p5, p95 = np.percentile(rms, [5, 95])
+k = len(rms)
+
+def share(x):
+    return f"{x} ({100 * x / k:.1f} %)"
+
+print(f"Файл: {a.wav}")
+print(f"{sr} Гц, {ch} кан., отрезок {(stop - start) / sr:.1f} с, окон {k} по {a.win * 1000:.0f} мс")
+print(f"RMS окон: медиана {med:.2f} дБFS, std {np.std(rms):.2f} дБ, "
+      f"P5 {p5:.2f}, P95 {p95:.2f}, P95-P5 {p95 - p5:.2f} дБ, "
+      f"мин {rms.min():.2f}, макс {rms.max():.2f}")
+print(f"RMS окна > медиана+6 дБ: {share(int((rms > med + 6).sum()))}, "
+      f"> +10 дБ: {share(int((rms > med + 10).sum()))}")
+print(f"Пик окон: медиана {pmed:.2f} дБFS, макс {pk.max():.2f}")
+print(f"Пик окна > медиана пиков+6 дБ: {share(int((pk > pmed + 6).sum()))}, "
+      f"> +10 дБ: {share(int((pk > pmed + 10).sum()))}")
+if e_all > 0:
+    print(f"Энергия ниже 40 Гц: {100 * e_low / e_all:.3f} %")
+if cnt:
+    cov = sxy / cnt - (sx / cnt) * (sy / cnt)
+    vx = sxx / cnt - (sx / cnt) ** 2
+    vy = syy / cnt - (sy / cnt) ** 2
+    print(f"Корреляция L/R (Пирсон): {cov / np.sqrt(vx * vy):+.3f}")
+    print(f"Баланс L/R: {10 * np.log10(sxx / syy):+.2f} дБ (плюс = левый громче)")

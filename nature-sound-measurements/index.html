@@ -89,6 +89,7 @@
 
     <h2>How we measured</h2>
     <p>The water recordings were made on a Zoom H5 as WAV files at 48 kHz / 24-bit, outdoors, on weekdays when the valleys are quiet. Spoken slates at the start and end of each take are left out of the analysed section. The flaws the numbers reveal, like the brook's channel imbalance, are what we then fix in preparation.</p>
+    <p>Since November 2026 the 400 ms numbers are produced with one small Python script (numpy and soundfile), starting with the window rain: <a href="/tools/measure_400ms.py">measure_400ms.py</a> (comments in Russian). It counts both channels together, in windows without overlap.</p>
     <p>We use the numbers to decide what becomes a long sleep or masking track. There is no single pass mark. A recording is used when it has low loudness variation, no real sudden peaks, a stable tone and clean low end. Anything that keeps changing, like birdsong, is rejected for all-night use however pleasant it sounds.</p>
 
     <h2>Limits of this data</h2>
