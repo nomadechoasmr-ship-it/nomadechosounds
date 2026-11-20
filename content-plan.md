@@ -87,7 +87,7 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
   - Short answer first: real rain recorded by the owner — black-screen rain from a window at home in Almaty, rain with video under a roof in the Tian Shan foothills (see "Locations confirmed by the owner"). No rain measurements exist yet: do NOT state any numbers about rain.
   - Listen block grouped by what people look for, using only videos from data/videos.json with real IDs and their titles: steady rain no thunder (KJGQpNkAD4Q, 6uarWPUkNXg), rain with thunder (j4kJ0v3xFjg, IiV3rWl4H3U), short sessions (1ucsbJmA0e0, n8XxHcXzXY4), rain mixed with water (nXfx4Isi1BY, vKP4_jDg8aM).
   - Practical advice: thunder vs no thunder for light sleepers, timer vs all night (general, link /how-to-use-masking-sounds-at-night/). Embed FOLE7sBIHL8 (recording rain in the mountains short, .short wrapper).
-- [ ] 10. Stereo balance and why 3.5 dB matters in headphones over a night. Slug: /stereo-balance-sleep-sounds/
+- [x] 10. Stereo balance and why 3.5 dB matters in headphones over a night. Slug: /stereo-balance-sleep-sounds/
   - Use the Mountain Brook imbalance (L +3.5 dB, correlation 0.58) and the fix. Keep claims about perception general and sourced.
 - [x] 11. (merged into topic 8, 2026-11-13: section "Why we never use a compressor") Why we never use a compressor on nature recordings. Slug: /no-compressor-nature-recordings/ — SKIP if topic 8 already covers it well; then tick it as "merged into topic 8".
   - A compressor lifts the background noise and recorder hiss of natural recordings and flattens natural dynamics; we use only trim, balance, a gentle high shelf and normalisation. Use the Mountain River level figures as the example.
@@ -104,3 +104,4 @@ If a topic says BLOCKED, skip it. If no unblocked topic is left, publish nothing
 - 2026-11-10: River sounds for sleep — https://nomadechosounds.com/river-sounds-for-sleep/
 - 2026-11-13: Natural white noise made from real water — https://nomadechosounds.com/natural-white-noise-real-water/
 - 2026-11-17: Rain sounds for sleeping — https://nomadechosounds.com/rain-sounds-for-sleeping/
+- 2026-11-20: Stereo balance in sleep sounds — https://nomadechosounds.com/stereo-balance-sleep-sounds/

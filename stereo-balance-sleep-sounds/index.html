@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stereo Balance in Sleep Sounds: Why 3.5 dB Matters</title>
+<meta name="description" content="Our Mountain Brook recording leaned 3.5 dB to the left. Why a channel imbalance matters in headphones over a night, how we measure it and how we fixed it.">
+<link rel="canonical" href="https://nomadechosounds.com/stereo-balance-sleep-sounds/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Stereo balance in sleep sounds: why 3.5 dB matters in headphones">
+<meta property="og:description" content="Our steadiest brook had one flaw: the left channel was 3.5 dB louder. How we measure channel balance and why we fix it before a track goes on headphones for a night.">
+<meta property="og:url" content="https://nomadechosounds.com/stereo-balance-sleep-sounds/">
+<link rel="preload" href="/assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#121b2c">
+<meta property="og:site_name" content="Nomad Echo Sounds">
+<meta property="og:image" content="https://nomadechosounds.com/assets/share/andrey-zoom-h5-hands-16x9.jpg">
+<meta property="og:image:width" content="900">
+<meta property="og:image:height" content="506">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/style.css?v=10">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Stereo balance in sleep sounds: why 3.5 dB matters in headphones","description":"Our Mountain Brook recording leaned 3.5 dB to the left. Why a channel imbalance matters in headphones over a night, how we measure it and how we fixed it.","datePublished":"2026-11-20","dateModified":"2026-11-20","author":{"@type":"Person","@id":"https://nomadechosounds.com/about/#andrey","name":"Andrey","url":"https://nomadechosounds.com/about/","sameAs":["https://www.youtube.com/@NomadEchoASMR"]},"publisher":{"@id":"https://nomadechosounds.com/#org"},"mainEntityOfPage":"https://nomadechosounds.com/stereo-balance-sleep-sounds/","image":["https://nomadechosounds.com/assets/share/andrey-zoom-h5-hands-16x9.jpg","https://nomadechosounds.com/assets/share/andrey-zoom-h5-hands-4x3.jpg","https://nomadechosounds.com/assets/share/andrey-zoom-h5-hands-1x1.jpg"]},{"@type":"Organization","@id":"https://nomadechosounds.com/#org","name":"Nomad Echo Sounds","url":"https://nomadechosounds.com/","logo":{"@type":"ImageObject","url":"https://nomadechosounds.com/assets/icon-512.png","width":512,"height":512},"sameAs":["https://www.youtube.com/@NomadEchoASMR","https://ko-fi.com/nomadecho"]}]}
+</script>
+</head>
+<body>
+<header class="night compact">
+  <div class="moon" aria-hidden="true"></div>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="brand" href="/">Nomad Echo Sounds</a>
+      <ul>
+        <li><a href="/tinnitus-masking-sounds/">Tinnitus guide</a></li>
+        <li><a href="/library/">Library</a></li>
+        <li><a href="/tian-shan-field-recordings/">Where we record</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <span class="label">Field notes · Stereo balance</span>
+      <h1>Stereo balance in sleep sounds: why 3.5 dB matters in headphones</h1>
+      <p class="meta" style="color:var(--night-muted)">November 2026 · By Andrey · 4 min read</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <article class="prose">
+    <p><b>Short answer:</b> in headphones each channel goes straight into one ear, so if one channel is louder, the whole sound sits to that side for as long as you listen. Our Mountain Brook recording had its left channel 3.5 dB louder than the right; on a speaker you would hardly notice, but over a night in headphones it would lean to the left. We measure balance on every take and corrected this one with a pan filter before looping.</p>
+
+    <h2>What we found in the brook</h2>
+    <p><a href="/recordings/mountain-brook/">Mountain Brook</a> is the steadiest recording we have: 0.31 dB of loudness variation and no sudden peaks more than 6 dB above its level. It was recorded on a Zoom H5 (WAV, 48 kHz / 24-bit) in the Tian Shan mountains near Almaty on 20 April 2026. By every steadiness measure it passed. The one thing the numbers caught was balance.</p>
+    <div class="tablebox">
+      <table>
+        <thead><tr><th>Measure</th><th>Mountain Brook</th><th>Mountain River</th></tr></thead>
+        <tbody>
+          <tr><td>Left / right balance (as published)</td><td class="num">L +3.5 dB</td><td class="num">−0.46 dB</td></tr>
+          <tr><td>Balance, rerun with our script (5:00–19:55)</td><td class="num">L +3.63 dB</td><td class="num">—</td></tr>
+          <tr><td>Balance, rerun on the part used (0:20–19:55)</td><td class="num">L +3.62 dB</td><td class="num">—</td></tr>
+          <tr><td>Left / right correlation (Pearson)</td><td class="num">+0.59</td><td class="num">—</td></tr>
+          <tr><td>What we did</td><td><span class="pill ok">Fixed</span> pan filter</td><td><span class="pill ok">Fixed</span> small correction</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">Balance is 20·log10(RMS of the left channel ÷ RMS of the right channel) over the whole measured section; a plus sign means the left side is louder. Correlation is the Pearson coefficient between the two channels over the whole section (0.587 in the rerun, shown as 0.58 on the recording page). “—” means not reported. All numbers are from the raw takes, before any processing.</p>
+    <p>The rerun with our own measuring script confirmed the first result to within about a tenth of a decibel, on both the analysed section and the whole part we used for the track. So this was not a fluke of one excerpt: the left side was louder for the entire take.</p>
+
+    <h2>Why a few decibels matter in headphones</h2>
+    <p>One of the cues your hearing uses to tell where a sound comes from is the difference in level between the two ears: a sound off to one side reaches the nearer ear louder, because the head shadows the far ear. With headphones that cue is created directly. Whatever level difference is in the file becomes a level difference between your ears, and the sound is heard toward the louder side [1].</p>
+    <p>For music that is a creative choice. For a sleep or masking track it is a flaw. The point of a steady water sound is that nothing about it asks for attention, and a sound that sits off-centre all night is one more thing you notice. With the brook, the lean would hardly be noticed on speakers, where both ears hear both channels. In headphones, over a whole night, the sound would sit noticeably to the left.</p>
+    <p>We do not claim a 3.5 dB lean does anything to your ears. It is simply an error in the recording that headphones make obvious, and it costs almost nothing to correct.</p>
+
+    <h2>Where an imbalance comes from</h2>
+    <p>Outdoors, water is rarely spread evenly around a recorder. The Zoom H5 stands on a stone or on the grass a short distance back from the stream. If more of the flow is on one side, that side records louder. The ear on the spot adjusts to this without noticing; a measurement does not. That is why we measure every take instead of trusting what it sounded like by the water (<a href="/how-we-record-water-sounds/">how we record</a>).</p>
+
+    <h2>Balance is not the same as width</h2>
+    <p>Correlation tells a different story from balance. A correlation of +1 means both channels are identical, which sounds like a single point in the middle of your head. Near 0 means the two channels share little. The brook measured +0.59: the channels have plenty in common, but each still carries its own detail of the water, so it sounds wide rather than flat.</p>
+    <p>That is why we fixed the brook with a pan filter that only evens out the levels. Collapsing it to mono would also have removed the lean, but it would have thrown away the width that makes a field recording sound like a place. For comparison, the raw window rain we recorded at night in Almaty measured +0.50 by the same Pearson method (<a href="/rain-sounds-for-sleeping/">rain notes</a>).</p>
+
+    <h2>How the brook was prepared</h2>
+    <ul class="chain">
+      <li><b>Trim</b> the spoken slate: we kept 0:20 to 19:55 of the take.</li>
+      <li><b>Balance</b> the channels with a pan filter to remove the 3.5 dB lean to the left.</li>
+      <li><b>Soften the top end</b> with a high shelf of −5 dB at 6 kHz.</li>
+      <li><b>No compressor.</b> The brook is already steady.</li>
+      <li><b>Normalise</b> the peak to −3 dBFS.</li>
+      <li><b>Loop</b> to the full track length.</li>
+    </ul>
+    <p>The Mountain River needed far less: its channels were already within half a decibel of each other (−0.46 dB), and a small correction was enough (<a href="/recordings/mountain-river/">river notes</a>). Both recordings, with every other measure, are in our <a href="/nature-sound-measurements/">measurement data</a>.</p>
+
+    <h2>A quick check for any sleep track</h2>
+    <p>If a track seems to sit to one side in your headphones, swap the left and right earpieces. If the sound moves to the other side, the lean is in the recording. If it stays on the same side, the cause is outside the recording, for example a balance setting on the phone or the headphones themselves. Choosing between a speaker and headphones in general is covered in <a href="/how-to-use-masking-sounds-at-night/">how to use a masking sound at night</a>.</p>
+
+    <h2>Listen</h2>
+    <div class="videos">
+      <div class="video"><div class="thumb"><iframe src="https://www.youtube-nocookie.com/embed/i1Un95nTRa0" title="Mountain Brook, Nomad Echo" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="info"><b>Mountain Brook</b><span>Balanced before looping · real recorded water</span></div></div>
+      <div class="video"><div class="thumb"><iframe src="https://www.youtube-nocookie.com/embed/GM9wlcADK_s" title="Mountain River, Nomad Echo" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="info"><b>Mountain River</b><span>Black screen · real recorded water</span></div></div>
+    </div>
+    <p class="caption">More recordings, grouped by sound, are in the <a href="/library/">library</a>. No sound on this site or channel is generated: every track is made from Andrey's own recordings.</p>
+
+    <aside class="support has-photo" aria-label="Support the recordings">
+      <picture class="avatar"><source srcset="/assets/img/andrey-zoom-h5-hands-thumb.webp" type="image/webp"><img src="/assets/img/andrey-zoom-h5-hands-thumb.jpg" alt="Andrey's hands fitting a fur windscreen on the Zoom H5 recorder before a take" width="240" height="300" loading="lazy"></picture>
+      <div class="support-body">
+      <span class="from">A note from Andrey</span>
+      <p>Hi, I'm Andrey, the sound recordist behind these tracks. I live in Almaty and drive out to the Tian Shan and Kapchagay as often as I can. A good take often needs several trips before the water, the wind and the silence all line up.</p>
+      <p>Everything here stays free. If a recording helped you sleep or quieted the ringing, you can buy me a coffee. It pays for fuel to get to the next stream.</p>
+      <a class="kofi" href="https://ko-fi.com/nomadecho" rel="noopener">Buy me a coffee on Ko-fi →</a>
+      </div>
+    </aside>
+    <div class="note">This page shares how we record and measure sound. It is not medical advice. If your tinnitus is new, changes suddenly, or affects one ear only, see a doctor or audiologist. Keep masking sounds at a comfortable volume.</div>
+
+    <h2>Sources</h2>
+    <ol class="refs">
+      <li>Wolfe J. M. et al. <i>Sensation &amp; Perception</i>, 4th edition, Sinauer Associates, 2015. Activity 10.1: <a href="https://learninglink.oup.com/public/files/cdn/wolfe4e/wa10.01.html" rel="noopener">Auditory localization cues</a> (interaural level differences, headphone demonstration).</li>
+    </ol>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="/">Nomad Echo Sounds</a> · Field recordings from Kazakhstan · No AI-generated audio · <a href="/about/">About</a> · <a href="/privacy/">Privacy</a> · <a href="/ai-data-collection/">AI Data Services</a> · <a class="js-mail" data-u="hello" data-d="nomadechosounds.com" href="/about/#contact">Contact</a></p>
+    <p>Content on this site is for relaxation and general information. It is not a substitute for professional medical care.</p>
+    <p>Enjoy the recordings? You can <a href="https://ko-fi.com/nomadecho" rel="noopener">support the next field trip on Ko-fi</a>.</p>
+  </div>
+</footer>
+<script>document.querySelectorAll(".js-mail").forEach(function(a){var m=a.dataset.u+"@"+a.dataset.d;a.href="mailto:"+m;a.textContent=m;});</script>
+</body>
+</html>
