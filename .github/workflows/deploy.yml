@@ -42,6 +42,8 @@ jobs:
           rsync -a --exclude '.git' --exclude '.github' --exclude 'scripts' --exclude 'data' \
             --exclude 'content-plan.md' --exclude 'README.md' --exclude 'netlify.toml' --exclude '_site' ./ _site/
           ls _site
+      - name: Add VideoObject structured data
+        run: python scripts/add_video_schema.py _site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
