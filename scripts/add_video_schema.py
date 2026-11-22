@@ -17,6 +17,18 @@ ID_RE = re.compile(r'(?:youtube(?:-nocookie)?\.com/embed/|data-id=")([A-Za-z0-9_
 
 videos = {v["id"]: v for v in json.loads((ROOT / "data" / "videos.json").read_text(encoding="utf-8"))["videos"]}
 
+TZ_RE = re.compile(r'(Z|[+-]\d{2}:\d{2})$')
+
+def iso_with_tz(d):
+    """Google requires uploadDate as ISO 8601 with a timezone.
+    data/videos.json stores YYYY-MM-DD (from the YouTube RSS feed, UTC)."""
+    d = d.strip()
+    if len(d) == 10:
+        return d + "T00:00:00+00:00"
+    if "T" in d and not TZ_RE.search(d):
+        return d + "+00:00"
+    return d
+
 def video_node(v):
     vid = v["id"]
     return {
@@ -25,7 +37,7 @@ def video_node(v):
         "name": v["title"],
         "description": f"{v['title']}. A real field recording by Nomad Echo, not generated.",
         "thumbnailUrl": f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg",
-        "uploadDate": v["published"],
+        "uploadDate": iso_with_tz(v["published"]),
         "embedUrl": f"https://www.youtube.com/embed/{vid}",
         "url": f"https://www.youtube.com/watch?v={vid}",
     }
